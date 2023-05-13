@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical">
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+android:gravity="center_horizontal">
 
     <TextView
         android:id="@+id/textView"
@@ -14,14 +14,13 @@
         android:layout_marginTop="30dp"
         android:layout_marginRight="150dp"
         android:layout_weight="0"
-        android:text="전화를 거는 중..." />
+        android:text="통화중" />
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
-
-    </LinearLayout>
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp">
+</LinearLayout>
 
     <TextView
         android:layout_width="wrap_content"
@@ -31,11 +30,11 @@
         android:textSize="40dp" />
 
     <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:columnCount="3"
-        android:orientation="horizontal">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:columnCount="3"
+    android:layout_marginTop="150dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -62,14 +61,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
+            android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:paddingRight="20dp"
+            android:paddingRight="10dp"
             android:paddingBottom="10dp"
             android:text="블루투스"
             android:textSize="20dp"
             android:textStyle="bold" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -80,7 +78,6 @@
             android:text="스피커"
             android:textSize="20dp"
             android:textStyle="bold" />
-
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -95,16 +92,17 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="20dp"
+            android:paddingLeft="10dp"
             android:paddingTop="10dp"
-            android:paddingRight="20dp"
+            android:paddingRight="10dp"
             android:paddingBottom="10dp"
             android:text="키패드"
             android:textSize="20dp"
             android:textStyle="bold" />
 
 
-    </GridLayout>
+</GridLayout>
+
 
 
     <Button
@@ -113,6 +111,7 @@
         android:layout_height="60dp"
         android:layout_marginTop="60dp"
         android:text="통화 끊기" />
+
 
 
 </LinearLayout>
