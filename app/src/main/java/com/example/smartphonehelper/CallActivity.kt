@@ -18,4 +18,5 @@ class CallActivity : AppCompatActivity() {
         call = findViewById<Button>(R.id.icon_call)
         back = findViewById<Button>(R.id.icon_back)
     }
+
 }
