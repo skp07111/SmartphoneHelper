@@ -15,20 +15,12 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // 전화걸기 버튼
-        mainCall = findViewById<Button>(R.id.button_call)
         // 영상통화 버튼
         mainVideoCall = findViewById<Button>(R.id.button_videoCall)
         // 메시지 버튼
         mainMessage = findViewById<Button>(R.id.button_message)
         // 카메라 버튼
         mainCamera = findViewById<Button>(R.id.button_camera)
-
-        // 전화걸기 버튼 누르면 CallActivity로 전환
-        mainCall.setOnClickListener() {
-            var intent = Intent(this, CallActivity::class.java)
-            startActivity(intent)
-        }
 
         // 영상통화 버튼 누르면 VideoCallActivity로 전환
         mainVideoCall.setOnClickListener() {
