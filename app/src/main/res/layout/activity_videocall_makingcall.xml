@@ -47,33 +47,33 @@
 
         <Button
             android:id="@+id/icon_vc_camera"
-            android:layout_width="80"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
             android:text="카메라" />
 
         <Button
             android:id="@+id/icon_vc_change"
-            android:layout_width="80"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_weight="0"
             android:text="전환" />
 
         <Button
             android:id="@+id/icon_vc_off"
-            android:layout_width="80"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
             android:text="통화종료" />
 
         <Button
             android:id="@+id/icon_vc_block"
-            android:layout_width="80"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_weight="0"
             android:text="내 소리 차단" />
 
         <Button
             android:id="@+id/icon_vc_speaker"
-            android:layout_width="80"
+            android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_weight="0"
             android:text="스피커" />
