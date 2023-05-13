@@ -12,7 +12,7 @@
         android:layout_height="90dp"
         android:layout_marginTop="300dp"
         android:layout_marginBottom="300dp"
-        android:text="영상통화"
+        android:text="통화"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.109"

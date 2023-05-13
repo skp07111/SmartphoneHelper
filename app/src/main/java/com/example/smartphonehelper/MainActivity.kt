@@ -24,7 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         // 영상통화 버튼 누르면 VideoCallActivity로 전환
         mainVideoCall.setOnClickListener() {
-            var intent = Intent(this, VideoCallActivity::class.java)
+            var intent = Intent(this, CallActivity::class.java)
             startActivity(intent)
         }
 

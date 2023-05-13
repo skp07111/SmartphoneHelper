@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
-class VideoCallActivity : AppCompatActivity() {
+class CallActivity : AppCompatActivity() {
 
     lateinit var videoCall: Button
     lateinit var call: Button
@@ -12,7 +12,7 @@ class VideoCallActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_video_call)
+        setContentView(R.layout.activity_call)
 
         videoCall = findViewById<Button>(R.id.icon_video)
         call = findViewById<Button>(R.id.icon_call)

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="150dp"
+        android:layout_weight="0"
+        android:text="영상통화 발신 중..." />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="010-1234-5678"
+        android:textSize="40dp" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:columnCount="3"
+        android:orientation="horizontal"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="61dp"
+        android:layout_weight="0"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/icon_vc_camera"
+            android:layout_width="80"
+            android:layout_height="match_parent"
+            android:text="카메라" />
+
+        <Button
+            android:id="@+id/icon_vc_change"
+            android:layout_width="80"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:text="전환" />
+
+        <Button
+            android:id="@+id/icon_vc_off"
+            android:layout_width="80"
+            android:layout_height="match_parent"
+            android:text="통화종료" />
+
+        <Button
+            android:id="@+id/icon_vc_block"
+            android:layout_width="80"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:text="내 소리 차단" />
+
+        <Button
+            android:id="@+id/icon_vc_speaker"
+            android:layout_width="80"
+            android:layout_height="match_parent"
+            android:layout_weight="0"
+            android:text="스피커" />
+    </LinearLayout>
+
+</LinearLayout>

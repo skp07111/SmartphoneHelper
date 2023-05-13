@@ -13,18 +13,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartphoneHelper"
         tools:targetApi="31">
+
         <activity
-            android:name=".VideoCallActivity"
+            android:name=".CallActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MessageActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".CameraActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
