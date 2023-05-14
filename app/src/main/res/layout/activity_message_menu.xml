@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/oneOnOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1:1 대화"
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="481dp" />
+
+    <Button
+        android:id="@+id/groupChat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="그룹 채팅"
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="546dp" />
+
+    <Button
+        android:id="@+id/groupText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="단체 문자"
+        tools:layout_editor_absoluteX="262dp"
+        tools:layout_editor_absoluteY="615dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

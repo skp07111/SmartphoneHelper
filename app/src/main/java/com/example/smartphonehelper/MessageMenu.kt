@@ -1,12 +1,21 @@
 package com.example.smartphonehelper
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
 class MessageMenu : AppCompatActivity(){
 
-
+    //1대1대화 버튼 클릭시 메세지 작성 화면으로 전환하기
+    lateinit var oneOnOne : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_message_menu)}
+        setContentView(R.layout.activity_message_menu)
+         oneOnOne= findViewById<Button>(R.id.oneOnOne)
+        oneOnOne.setOnClickListener{
+            val intent= Intent(this, MessageWrite::class.java)
+            startActivity(intent)
+        }
+    }
 }
