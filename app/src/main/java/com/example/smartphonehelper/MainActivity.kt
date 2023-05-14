@@ -3,7 +3,9 @@ package com.example.smartphonehelper
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
 import android.widget.Button
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
     lateinit var mainCall : Button
@@ -39,5 +41,9 @@ class MainActivity : AppCompatActivity() {
             var intent = Intent(this, CameraActivity::class.java)
             startActivity(intent)
         }
+
+
+
+
     }
 }

@@ -15,6 +15,8 @@ class C_OnThePhoneCallActivity : AppCompatActivity() {
         // 통화 끊기 버튼을 누르면 통화종료되어 CallActivity 화면으로 전환
         stopCall.setOnClickListener {
             val intent = Intent(this, CallActivity::class.java)
+            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
             startActivity(intent)
         }
     }
