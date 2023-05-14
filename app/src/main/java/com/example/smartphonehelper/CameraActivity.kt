@@ -13,12 +13,14 @@ class CameraActivity : AppCompatActivity() {
     lateinit var imageViewTest: ImageView
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camera)
 
         btn_camera_click = findViewById(R.id.btn_camera_click);
         cameraMainImageView = findViewById(R.id.cameraMainImageView);
+        imageViewTest = findViewById(R.id.imageViewTest);
 
         btn_camera_click.setOnClickListener {
             imageViewTest.setImageResource(R.drawable.ic_baseline_person_24)

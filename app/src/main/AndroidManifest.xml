@@ -15,7 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartphoneHelper"
         tools:targetApi="31">
-
+        <activity
+            android:name=".CameraTutorialActivity"
+            android:exported="false" />
         <activity
             android:name=".C_OnThePhoneCallActivity"
             android:exported="false"
@@ -50,4 +52,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
