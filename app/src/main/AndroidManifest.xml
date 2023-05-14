@@ -19,7 +19,7 @@
         <activity
             android:name=".C_OnThePhoneCallActivity"
             android:exported="false"
-            android:parentActivityName=".C_MakingCallActivity" />
+            android:parentActivityName=".CallActivity" />
         <activity
             android:name=".C_MakingCallActivity"
             android:exported="false"
@@ -50,5 +50,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
