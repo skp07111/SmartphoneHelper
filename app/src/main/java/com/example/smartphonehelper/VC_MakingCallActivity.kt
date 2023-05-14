@@ -42,7 +42,7 @@ class VC_MakingCallActivity  : AppCompatActivity() {
 
         override fun onError(camera: CameraDevice, error: Int) {
             camera.close()
-            Log.e("MirrorAppActivity", "Failed to open camera")
+            Log.e("VC_MakingCallActivity", "Failed to open camera")
         }
     }
 
@@ -109,7 +109,7 @@ class VC_MakingCallActivity  : AppCompatActivity() {
             }
             cameraManager.openCamera(cameraId, cameraDeviceStateCallback, null)
         } catch (e: CameraAccessException) {
-            Log.e("MirrorAppActivity", "Failed to access camera", e)
+            Log.e("VC_MakingCallActivity", "Failed to access camera", e)
         }
     }
 
@@ -122,11 +122,11 @@ class VC_MakingCallActivity  : AppCompatActivity() {
                 }
 
                 override fun onConfigureFailed(session: CameraCaptureSession) {
-                    Log.e("MirrorAppActivity", "Failed to configure camera capture session")
+                    Log.e("VC_MakingCallActivity", "Failed to configure camera capture session")
                 }
             }, null)
         } catch (e: CameraAccessException) {
-            Log.e("MirrorAppActivity", "Failed to create camera capture session", e)
+            Log.e("VC_MakingCallActivity", "Failed to create camera capture session", e)
         }
     }
 
@@ -136,7 +136,7 @@ class VC_MakingCallActivity  : AppCompatActivity() {
             captureRequestBuilder.addTarget(previewSurface)
             captureSession.setRepeatingRequest(captureRequestBuilder.build(), null, null)
         } catch (e: CameraAccessException) {
-            Log.e("MirrorAppActivity", "Failed to update preview", e)
+            Log.e("VC_MakingCallActivity", "Failed to update preview", e)
         }
     }
 
@@ -146,7 +146,7 @@ class VC_MakingCallActivity  : AppCompatActivity() {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 openCamera()
             } else {
-                Log.e("MirrorAppActivity", "Camera permission denied")
+                Log.e("VC_MakingCallActivity", "Camera permission denied")
             }
         }
     }
