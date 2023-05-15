@@ -12,6 +12,7 @@ class CameraActivity : AppCompatActivity() {
 
     lateinit var moveButton: Button
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camera)

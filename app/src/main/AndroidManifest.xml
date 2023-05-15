@@ -7,11 +7,13 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+
     <queries>
         <intent>
             <action android:name="android.intent.action.TTS_SERVICE" />
         </intent>
     </queries>
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -22,6 +24,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartphoneHelper"
         tools:targetApi="31">
+        <activity
+            android:name=".CameraPage1"
+            android:exported="false" />
+        <activity
+            android:name=".CameraSufaceView"
+            android:exported="false" />
         <activity
             android:name=".CameraTutorialActivity"
             android:exported="false" />
@@ -58,9 +66,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".TTSActivity"
-            android:permission="android.permission.BIND_IMS_SERVICE"
-            android:exported="true">
+        <activity
+            android:name=".TTSActivity"
+            android:exported="true"
+            android:permission="android.permission.BIND_IMS_SERVICE">
             <intent-filter>
                 <action android:name="android.intent.action.TTS_SERVICE" />
             </intent-filter>
