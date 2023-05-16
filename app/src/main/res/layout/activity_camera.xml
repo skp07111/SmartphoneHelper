@@ -47,7 +47,7 @@
             android:background="#80000000"
             android:gravity="center"
             android:padding="16dp"
-            android:text="사진 촬영에 성공하셨습니다!\n잘 하셨어요."
+            android:text="사진 촬영에 성공하셨습니다!\n잘하셨어요."
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:visibility="visible" /> <!-- 수정: 가시성을 "visible"로 변경 -->
