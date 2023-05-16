@@ -2,6 +2,7 @@ package com.example.smartphonehelper
 
 import android.content.Intent
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
@@ -20,10 +21,7 @@ class CallActivity : AppCompatActivity() {
         call = findViewById<Button>(R.id.icon_call)
         back = findViewById<Button>(R.id.icon_back)
 
-        //tts로 안내음성 출력
-        val text = "테스트입니다".toString()
-        val ttsactivity = TTSActivity()
-        ttsactivity.ttsSpeak(text)
+
 
 
         // 통화 버튼 눌렀을 때 통화거는중 화면 (C_MakingCallActiviy)으로 전환
