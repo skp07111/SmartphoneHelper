@@ -73,7 +73,7 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
 
     private fun showCaptureStartMessage() {
         captureMessageContainer.visibility = View.VISIBLE
-        captureMessage.text = "사진 촬영을 하시려면 하단에 위치한 동그란 하얀색 버튼을 눌러주세요!"
+        captureMessage.text = "사진 촬영을 하시려면\n하단에 위치한 동그란 하얀색 버튼을\n눌러주세요!"
     }
 
     private fun showCaptureSuccessMessage() {
