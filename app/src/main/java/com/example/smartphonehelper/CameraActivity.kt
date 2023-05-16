@@ -78,7 +78,7 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
 
     private fun showCaptureSuccessMessage() {
         captureMessage.visibility = View.VISIBLE
-        captureMessage.text = "사진 촬영에 성공하셨습니다!\n잘 하셨어요."
+        captureMessage.text = "사진 촬영에 성공하셨습니다!\n잘하셨어요."
 
         // 3초 후에 메시지를 숨김
         Handler().postDelayed({
