@@ -32,7 +32,6 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camera)
-
         val surfaceView = findViewById<SurfaceView>(R.id.cameraPreview)
         captureButton = findViewById(R.id.captureButton)
         capturedImage = findViewById(R.id.capturedImage)
@@ -60,6 +59,10 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
                     camera?.setPreviewDisplay(holder)
                     camera?.startPreview()
                     showCaptureSuccessMessage()
+                    // 3초 후에 이미지를 숨김
+                    Handler().postDelayed({
+                        capturedImage.visibility = View.GONE
+                    }, 3000)
                 } catch (e: IOException) {
                     e.printStackTrace()
                 }
@@ -70,10 +73,10 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
     private fun showCaptureSuccessMessage() {
         captureMessage.visibility = View.VISIBLE
 
-        // 5초 후에 메시지를 숨김
+        // 3초 후에 메시지를 숨김
         Handler().postDelayed({
             captureMessage.visibility = View.GONE
-        }, 5000)
+        }, 3000)
     }
 
     private fun rotateBitmap(bitmap: Bitmap?, degrees: Int): Bitmap? {
