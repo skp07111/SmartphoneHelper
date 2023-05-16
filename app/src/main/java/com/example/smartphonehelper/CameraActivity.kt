@@ -8,9 +8,9 @@ import android.graphics.BitmapFactory
 import android.graphics.Matrix
 import android.hardware.Camera
 import android.os.Bundle
+import android.os.Handler
 import android.view.*
-import android.widget.Button
-import android.widget.ImageView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -24,6 +24,9 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
     private lateinit var captureButton: Button
     private lateinit var capturedImage: ImageView
 
+    private lateinit var captureMessageContainer: RelativeLayout
+    private lateinit var captureMessage: TextView
+
     private val CAMERA_PERMISSION_REQUEST = 100
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,6 +36,9 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
         val surfaceView = findViewById<SurfaceView>(R.id.cameraPreview)
         captureButton = findViewById(R.id.captureButton)
         capturedImage = findViewById(R.id.capturedImage)
+
+        captureMessageContainer = findViewById(R.id.captureMessageContainer)
+        captureMessage = findViewById(R.id.captureMessage)
 
         surfaceHolder = surfaceView.holder
         surfaceHolder?.addCallback(this)
@@ -45,7 +51,7 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
     private fun captureImage() {
         camera?.takePicture(null, null, Camera.PictureCallback { data, _ ->
             val bitmap = data?.toBitmap()
-            val rotatedBitmap = rotateBitmap(bitmap, 90) // 이미지를 90도 회전시킴
+            val rotatedBitmap = rotateBitmap(bitmap, 90)
             capturedImage.setImageBitmap(rotatedBitmap)
             capturedImage.visibility = View.VISIBLE
             surfaceHolder?.let { holder ->
@@ -53,11 +59,21 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
                     camera?.stopPreview()
                     camera?.setPreviewDisplay(holder)
                     camera?.startPreview()
+                    showCaptureSuccessMessage()
                 } catch (e: IOException) {
                     e.printStackTrace()
                 }
             }
         })
+    }
+
+    private fun showCaptureSuccessMessage() {
+        captureMessage.visibility = View.VISIBLE
+
+        // 5초 후에 메시지를 숨김
+        Handler().postDelayed({
+            captureMessage.visibility = View.GONE
+        }, 5000)
     }
 
     private fun rotateBitmap(bitmap: Bitmap?, degrees: Int): Bitmap? {

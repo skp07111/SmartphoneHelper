@@ -24,4 +24,25 @@
         android:layout_above="@id/captureButton"
         android:scaleType="fitXY" />
 
+    <RelativeLayout
+        android:id="@+id/captureMessageContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/captureMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="사진 촬영에 성공하셨습니다!\n잘 하셨어요."
+            android:textSize="24sp"
+            android:textColor="#FFFFFF"
+            android:background="#80000000"
+            android:padding="16dp"
+            android:visibility="gone"
+            android:gravity="center" />
+
+    </RelativeLayout>
+
+
 </RelativeLayout>
