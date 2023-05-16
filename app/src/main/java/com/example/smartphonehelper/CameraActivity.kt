@@ -60,10 +60,10 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
                     camera?.setPreviewDisplay(holder)
                     camera?.startPreview()
                     showCaptureSuccessMessage()
-                    // 3초 후에 이미지를 숨김
+                    // 5초 후에 이미지를 숨김
                     Handler().postDelayed({
                         capturedImage.visibility = View.GONE
-                    }, 3000)
+                    }, 5000)
                 } catch (e: IOException) {
                     e.printStackTrace()
                 }
@@ -78,12 +78,12 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
 
     private fun showCaptureSuccessMessage() {
         captureMessage.visibility = View.VISIBLE
-        captureMessage.text = "사진 촬영에 성공하셨습니다!\n잘하셨어요."
+        captureMessage.text = "사진 촬영에 성공하셨습니다!\n잘하셨어요.\n(해당 사진은 연습용으로\n앨범에 저장되지 않습니다.)"
 
-        // 3초 후에 메시지를 숨김
+        // 5초 후에 메시지를 숨김
         Handler().postDelayed({
             captureMessage.visibility = View.GONE
-        }, 3000)
+        }, 5000)
     }
 
     private fun rotateBitmap(bitmap: Bitmap?, degrees: Int): Bitmap? {
