@@ -7,7 +7,7 @@
         android:id="@+id/cameraContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@id/captureButton"
+        android:layout_above="@+id/captureButton"
         android:paddingTop="70dp"
         android:paddingBottom="70dp">
 
@@ -50,7 +50,7 @@
             android:text="사진 촬영에 성공하셨습니다!\n잘 하셨어요."
             android:textColor="#FFFFFF"
             android:textSize="24sp"
-            android:visibility="gone" />
+            android:visibility="visible" /> <!-- 수정: 가시성을 "visible"로 변경 -->
 
     </RelativeLayout>
 

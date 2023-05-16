@@ -45,6 +45,7 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
         captureButton.setOnClickListener {
             captureImage()
         }
+        showCaptureStartMessage()
     }
 
     private fun captureImage() {
@@ -70,8 +71,14 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
         })
     }
 
+    private fun showCaptureStartMessage() {
+        captureMessageContainer.visibility = View.VISIBLE
+        captureMessage.text = "사진 촬영을 하시려면 하단에 위치한 동그란 하얀색 버튼을 눌러주세요!"
+    }
+
     private fun showCaptureSuccessMessage() {
         captureMessage.visibility = View.VISIBLE
+        captureMessage.text = "사진 촬영에 성공하셨습니다!\n잘 하셨어요."
 
         // 3초 후에 메시지를 숨김
         Handler().postDelayed({
@@ -86,7 +93,6 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
             bitmap!!, 0, 0, bitmap.width, bitmap.height, matrix, true
         )
     }
-
 
     private fun ByteArray.toBitmap(): Bitmap? {
         return BitmapFactory.decodeByteArray(this, 0, this.size)
