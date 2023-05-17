@@ -1,9 +1,12 @@
 package com.example.smartphonehelper
 
 import android.Manifest
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.hardware.camera2.*
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.view.Surface
@@ -15,7 +18,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import java.util.*
 
-class VC_OnThePhoneCallActivity  : AppCompatActivity() {
+class VC_MakingCallActivity  : AppCompatActivity() {
 
     private val CAMERA_PERMISSION_REQUEST_CODE = 1
     private lateinit var cameraManager: CameraManager
@@ -37,7 +40,7 @@ class VC_OnThePhoneCallActivity  : AppCompatActivity() {
 
         override fun onError(camera: CameraDevice, error: Int) {
             camera.close()
-            Log.e("VC_OnThePhoneCallActivity", "Failed to open camera")
+            Log.e("VC_MakingCallActivity", "Failed to open camera")
         }
     }
 
@@ -64,15 +67,19 @@ class VC_OnThePhoneCallActivity  : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_vc_onthephone)
+        setContentView(R.layout.activity_vc_makingcall)
+        //3초후 통화 연결 되어 영상통화중 화면(VC_OnThePhoneCallActivity)으로 전환
+        Handler(Looper.getMainLooper()).postDelayed({
+            startActivity(Intent(this, VC_OnThePhoneCallActivity::class.java))
+        }, 3000)
 
         // vc_camera = findViewById<Button>(R.id.icon_vc_camera)
-        vc_change = findViewById<Button>(R.id.icon_vc_change2)
-        vc_off = findViewById<Button>(R.id.icon_vc_off2)
-        vc_block = findViewById<Button>(R.id.icon_vc_block2)
-        vc_speaker = findViewById<Button>(R.id.icon_vc_speaker2)
+        vc_change = findViewById<Button>(R.id.icon_vc_change1)
+        vc_off = findViewById<Button>(R.id.icon_vc_off1)
+        vc_block = findViewById<Button>(R.id.icon_vc_block1)
+        vc_speaker = findViewById<Button>(R.id.icon_vc_speaker1)
 
-        val surfaceView: SurfaceView = findViewById(R.id.surfaceView2)
+        val surfaceView: SurfaceView = findViewById(R.id.surfaceView1)
         surfaceHolder = surfaceView.holder
         surfaceHolder.addCallback(surfaceCallback)
 
@@ -99,7 +106,7 @@ class VC_OnThePhoneCallActivity  : AppCompatActivity() {
             }
             //tts 말하기
             tts?.speak(
-                "상대방이 전화를 받았습니다.",
+                "이 기능은 영상통화 기능입니다.",
                 TextToSpeech.QUEUE_FLUSH,
                 null,
                 null
@@ -126,7 +133,7 @@ class VC_OnThePhoneCallActivity  : AppCompatActivity() {
             }
             cameraManager.openCamera(cameraId, cameraDeviceStateCallback, null)
         } catch (e: CameraAccessException) {
-            Log.e("VC_OnThePhoneCallActivity", "Failed to access camera", e)
+            Log.e("VC_MakingCallActivity", "Failed to access camera", e)
         }
     }
 
@@ -139,11 +146,11 @@ class VC_OnThePhoneCallActivity  : AppCompatActivity() {
                 }
 
                 override fun onConfigureFailed(session: CameraCaptureSession) {
-                    Log.e("VC_OnThePhoneCallActivity", "Failed to configure camera capture session")
+                    Log.e("VC_MakingCallActivity", "Failed to configure camera capture session")
                 }
             }, null)
         } catch (e: CameraAccessException) {
-            Log.e("VC_OnThePhoneCallActivity", "Failed to create camera capture session", e)
+            Log.e("VC_MakingCallActivity", "Failed to create camera capture session", e)
         }
     }
 
@@ -153,7 +160,7 @@ class VC_OnThePhoneCallActivity  : AppCompatActivity() {
             captureRequestBuilder.addTarget(previewSurface)
             captureSession.setRepeatingRequest(captureRequestBuilder.build(), null, null)
         } catch (e: CameraAccessException) {
-            Log.e("VC_OnThePhoneCallActivity", "Failed to update preview", e)
+            Log.e("VC_MakingCallActivity", "Failed to update preview", e)
         }
     }
 
@@ -163,7 +170,7 @@ class VC_OnThePhoneCallActivity  : AppCompatActivity() {
             if (grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 openCamera()
             } else {
-                Log.e("VC_OnThePhoneCallActivity", "Camera permission denied")
+                Log.e("VC_MakingCallActivity", "Camera permission denied")
             }
         }
     }
