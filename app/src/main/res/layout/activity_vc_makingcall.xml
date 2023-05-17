@@ -7,7 +7,7 @@
     android:orientation="vertical">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="150dp"
@@ -29,7 +29,7 @@
         android:textSize="40dp" />
 
     <SurfaceView
-        android:id="@+id/surfaceView"
+        android:id="@+id/surfaceView1"
         android:layout_width="400dp"
         android:layout_height="400dp"
         android:layout_marginTop="10dp" />
@@ -41,33 +41,33 @@
         android:gravity="center">
 
         <Button
-            android:id="@+id/icon_vc_camera"
+            android:id="@+id/icon_vc_camera1"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:text="카메라" />
 
         <Button
-            android:id="@+id/icon_vc_change"
+            android:id="@+id/icon_vc_change1"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_weight="0"
             android:text="전환" />
 
         <Button
-            android:id="@+id/icon_vc_off"
+            android:id="@+id/icon_vc_off1"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:text="통화종료" />
 
         <Button
-            android:id="@+id/icon_vc_block"
+            android:id="@+id/icon_vc_block1"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_weight="0"
             android:text="내 소리 차단" />
 
         <Button
-            android:id="@+id/icon_vc_speaker"
+            android:id="@+id/icon_vc_speaker1"
             android:layout_width="80dp"
             android:layout_height="match_parent"
             android:layout_weight="0"
