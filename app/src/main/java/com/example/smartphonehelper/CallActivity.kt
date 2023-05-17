@@ -28,7 +28,7 @@ class CallActivity : AppCompatActivity() {
         }
         // 영상통화 버튼 눌렀을 때 영상통화 거는 화면(VC_MakingCallActivity)으로 전환
         videoCall.setOnClickListener {
-            val intent = Intent(this, VC_OnThePhoneCallActivity::class.java)
+            val intent = Intent(this, VC_MakingCallActivity::class.java)
             startActivity(intent)
         }
     }

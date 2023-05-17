@@ -68,10 +68,6 @@ class VC_MakingCallActivity  : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vc_makingcall)
-        //3초후 통화 연결 되어 영상통화중 화면(VC_OnThePhoneCallActivity)으로 전환
-        Handler(Looper.getMainLooper()).postDelayed({
-            startActivity(Intent(this, VC_OnThePhoneCallActivity::class.java))
-        }, 3000)
 
         // vc_camera = findViewById<Button>(R.id.icon_vc_camera)
         vc_change = findViewById<Button>(R.id.icon_vc_change1)
@@ -90,6 +86,12 @@ class VC_MakingCallActivity  : AppCompatActivity() {
         } else {
             openCamera()
         }
+
+        /* 이 코드 추가하면 오류남...
+        //3초후 통화 연결 되어 영상통화중 화면(VC_OnThePhoneCallActivity)으로 전환
+        Handler(Looper.getMainLooper()).postDelayed({
+            startActivity(Intent(this, VC_OnThePhoneCallActivity::class.java))
+        }, 3000) */
 
         openTTS()
     }

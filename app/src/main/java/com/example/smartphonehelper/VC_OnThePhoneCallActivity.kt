@@ -15,7 +15,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import java.util.*
 
-class VC_OnThePhoneCallActivity  : AppCompatActivity() {
+class VC_OnThePhoneCallActivity : AppCompatActivity() {
 
     private val CAMERA_PERMISSION_REQUEST_CODE = 1
     private lateinit var cameraManager: CameraManager
