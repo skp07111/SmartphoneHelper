@@ -57,25 +57,28 @@
         android:background="@drawable/ic_cameracaptureicon"
         app:backgroundTint="#FFFFFF" />
 
-    <Button
+
+    <ImageButton
         android:id="@+id/cameraChangeButton"
-        android:layout_width="61dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="45dp"
-        android:layout_marginBottom="33dp"
-        android:background="@drawable/ic_camerachangeicon" />
+        android:layout_marginEnd="42dp"
+        android:layout_marginBottom="29dp"
+        android:background="#00FFFFFF"
+        app:srcCompat="@drawable/ic_camerachangeicon" />
 
-    <Button
+    <ImageButton
         android:id="@+id/cameraPreviewButton"
-        android:layout_width="47dp"
-        android:layout_height="45dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="45dp"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/ic_camerapreviewicon" />
+        android:layout_marginStart="42dp"
+        android:layout_marginBottom="36dp"
+        android:background="#00FFFFFF"
+        app:srcCompat="@drawable/ic_camerapreviewicon" />
 
     <ImageView
         android:id="@+id/cameraTabBar"
