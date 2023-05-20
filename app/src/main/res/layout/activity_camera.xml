@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#000000">
@@ -24,6 +25,26 @@
             android:scaleType="fitXY"
             android:visibility="gone" />
 
+        <RelativeLayout
+            android:id="@+id/captureMessageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/captureMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#80000000"
+                android:gravity="center"
+                android:padding="16dp"
+                android:text="사진 촬영에 성공하셨습니다!\n잘하셨어요.\n(해당 사진은 연습용으로 앨범에 저장되지 않습니다.)"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:visibility="visible" /> <!-- 수정: 가시성을 "visible"로 변경 -->
+
+        </RelativeLayout>
+
     </FrameLayout>
 
     <Button
@@ -35,24 +56,117 @@
         android:layout_marginBottom="16dp"
         android:text="Capture" />
 
-    <RelativeLayout
-        android:id="@+id/captureMessageContainer"
+    <ImageView
+        android:id="@+id/cameraTabBar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center">
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        app:srcCompat="@drawable/camera_top_bar" />
+
+    <LinearLayout
+        android:id="@+id/buttonContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 1"
+            android:textColor="@android:color/transparent"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 2"
+            android:textColor="@android:color/transparent"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 3"
+            android:textColor="@android:color/transparent"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 4"
+            android:textColor="@android:color/transparent"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 5"
+            android:textColor="@android:color/transparent"
+            android:background="@android:color/transparent" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Button 6"
+            android:textColor="@android:color/transparent"
+            android:background="@android:color/transparent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/glowLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonContainer"
+        android:background="@drawable/glow_effect"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone">
 
         <TextView
-            android:id="@+id/captureMessage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#80000000"
-            android:gravity="center"
-            android:padding="16dp"
-            android:text="사진 촬영에 성공하셨습니다!\n잘하셨어요.\n(해당 사진은 연습용으로 앨범에 저장되지 않습니다.)"
+            android:text="상단에 있는 기능들을 알고 싶으시면 손가락으로 눌러보세요! 각각 무슨 역할을 하는 기능인지 설명이 나타납니다."
             android:textColor="#FFFFFF"
-            android:textSize="24sp"
-            android:visibility="visible" /> <!-- 수정: 가시성을 "visible"로 변경 -->
+            android:textSize="18sp" />
 
-    </RelativeLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/popupContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonContainer"
+        android:background="#80000000"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/popupMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/closePopupButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="닫기" />
+
+    </LinearLayout>
 
 </RelativeLayout>
