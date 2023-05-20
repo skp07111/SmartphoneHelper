@@ -69,8 +69,8 @@
         android:background="#00FFFFFF"
         app:srcCompat="@drawable/ic_camerachangeicon" />
 
-    <ImageButton
-        android:id="@+id/cameraPreviewButton"
+    <ImageView
+        android:id="@+id/cameraPreviewSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
