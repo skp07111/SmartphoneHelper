@@ -57,6 +57,26 @@
         android:background="@drawable/ic_cameracaptureicon"
         app:backgroundTint="#FFFFFF" />
 
+    <Button
+        android:id="@+id/cameraChangeButton"
+        android:layout_width="61dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/ic_camerachangeicon" />
+
+    <Button
+        android:id="@+id/cameraPreviewButton"
+        android:layout_width="47dp"
+        android:layout_height="45dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="45dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/ic_camerapreviewicon" />
+
     <ImageView
         android:id="@+id/cameraTabBar"
         android:layout_width="match_parent"
@@ -67,62 +87,62 @@
     <LinearLayout
         android:id="@+id/buttonContainer"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="69dp"
         android:layout_alignParentTop="true">
 
         <Button
             android:id="@+id/button1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:text="Button 1"
-            android:textColor="@android:color/transparent"
-            android:background="@android:color/transparent" />
+            android:textColor="@android:color/transparent" />
 
         <Button
             android:id="@+id/button2"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:text="Button 2"
-            android:textColor="@android:color/transparent"
-            android:background="@android:color/transparent" />
+            android:textColor="@android:color/transparent" />
 
         <Button
             android:id="@+id/button3"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:text="Button 3"
-            android:textColor="@android:color/transparent"
-            android:background="@android:color/transparent" />
+            android:textColor="@android:color/transparent" />
 
         <Button
             android:id="@+id/button4"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:text="Button 4"
-            android:textColor="@android:color/transparent"
-            android:background="@android:color/transparent" />
+            android:textColor="@android:color/transparent" />
 
         <Button
             android:id="@+id/button5"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:text="Button 5"
-            android:textColor="@android:color/transparent"
-            android:background="@android:color/transparent" />
+            android:textColor="@android:color/transparent" />
 
         <Button
             android:id="@+id/button6"
             android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@android:color/transparent"
             android:text="Button 6"
-            android:textColor="@android:color/transparent"
-            android:background="@android:color/transparent" />
+            android:textColor="@android:color/transparent" />
 
     </LinearLayout>
 
