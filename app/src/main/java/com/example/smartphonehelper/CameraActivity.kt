@@ -8,6 +8,7 @@ import android.graphics.drawable.ColorDrawable
 import android.hardware.Camera
 import android.os.Bundle
 import android.os.Handler
+import android.util.TypedValue
 import android.view.*
 import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
@@ -154,6 +155,10 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
         val textColor = ContextCompat.getColor(this, R.color.popupTextColor)
         popupMessage.setTextColor(textColor)
 
+        // 텍스트 크기 설정
+        val textSize = resources.getDimension(R.dimen.popupTextSize)
+        popupMessage.setTextSize(TypedValue.COMPLEX_UNIT_PX, textSize)
+
         popupMessage.text = message
         popupContainer.visibility = View.VISIBLE
 
@@ -187,7 +192,7 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
 
     private fun showCaptureStartMessage() {
         captureMessageContainer.visibility = View.VISIBLE
-        captureMessage.text = "사진 촬영을 하시려면\n하단에 위치한\n동그란 하얀색 버튼을\n눌러주세요!"
+        captureMessage.text = "사진 촬영을 하시려면\n하단 중앙에 위치한\n동그란 하얀색 버튼을\n눌러주세요!"
     }
 
     private fun showCaptureSuccessMessage() {

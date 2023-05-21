@@ -8,10 +8,11 @@
     <FrameLayout
         android:id="@+id/cameraContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="615dp"
         android:layout_above="@+id/captureButton"
+        android:layout_marginBottom="70dp"
         android:paddingTop="70dp"
-        android:paddingBottom="70dp">
+        android:paddingBottom="0dp">
 
         <SurfaceView
             android:id="@+id/cameraPreview"
@@ -41,7 +42,9 @@
                 android:text="사진 촬영에 성공하셨습니다!\n잘하셨어요.\n(해당 사진은 연습용으로 앨범에 저장되지 않습니다.)"
                 android:textColor="#FFFFFF"
                 android:textSize="30sp"
-                android:visibility="visible" /> <!-- 수정: 가시성을 "visible"로 변경 -->
+                android:visibility="visible" />
+
+            <!-- 수정: 가시성을 "visible"로 변경 -->
 
         </RelativeLayout>
 
@@ -164,7 +167,7 @@
             android:layout_height="wrap_content"
             android:text="상단에 있는 기능들을 알고 싶으시면 손가락으로 눌러보세요! 각각 무슨 역할을 하는 기능인지 설명이 나타납니다."
             android:textColor="#FFFFFF"
-            android:textSize="18sp" />
+            android:textSize="22sp" />
 
     </LinearLayout>
 
@@ -189,8 +192,70 @@
             android:id="@+id/closePopupButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="닫기" />
+            android:text="닫기"
+            android:textSize="18sp" />
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/cameraBottmMenulinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="-21dp"
+        android:layout_marginBottom="110dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true">
+
+            <ImageView
+                android:id="@+id/picturePersonIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_picturepersonicon" />
+
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="1dp" />
+
+            <ImageView
+                android:id="@+id/pictureTextIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_picturetexticon" />
+
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="1dp" />
+
+            <ImageButton
+                android:id="@+id/pictureVideoIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="#00FFFFFF"
+                android:src="@drawable/ic_picturevideoicon" />
+
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="1dp" />
+
+            <ImageView
+                android:id="@+id/pictureEtcIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_pictureetcicon" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
 
 </RelativeLayout>
