@@ -13,6 +13,7 @@ import android.view.Surface
 import android.view.SurfaceHolder
 import android.view.SurfaceView
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -59,21 +60,21 @@ class VC_MakingCallActivity  : AppCompatActivity() {
         }
     }
 
-    lateinit var vc_camera: Button
-    lateinit var vc_change: Button
-    lateinit var vc_off: Button
-    lateinit var vc_block: Button
-    lateinit var vc_speaker: Button
+    lateinit var vc_camera: ImageButton
+    lateinit var vc_change: ImageButton
+    lateinit var vc_off: ImageButton
+    lateinit var vc_block: ImageButton
+    lateinit var vc_speaker: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_vc_makingcall)
 
-        // vc_camera = findViewById<Button>(R.id.icon_vc_camera)
-        vc_change = findViewById<Button>(R.id.icon_vc_change1)
-        vc_off = findViewById<Button>(R.id.icon_vc_off1)
-        vc_block = findViewById<Button>(R.id.icon_vc_block1)
-        vc_speaker = findViewById<Button>(R.id.icon_vc_speaker1)
+        // vc_camera = findViewById<ImageButton>(R.id.icon_vc_camera1)
+        // vc_change = findViewById<ImageButton>(R.id.icon_vc_change1)
+        vc_off = findViewById<ImageButton>(R.id.icon_vc_off1)
+        // vc_block = findViewById<ImageButton>(R.id.icon_vc_block1)
+        // vc_speaker = findViewById<ImageButton>(R.id.icon_vc_speaker1)
 
         val surfaceView: SurfaceView = findViewById(R.id.surfaceView1)
         surfaceHolder = surfaceView.holder

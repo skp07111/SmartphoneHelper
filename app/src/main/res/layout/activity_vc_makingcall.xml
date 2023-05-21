@@ -34,43 +34,30 @@
         android:layout_height="400dp"
         android:layout_marginTop="10dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="69dp"
-        android:layout_weight="0"
-        android:gravity="center">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-        <Button
-            android:id="@+id/icon_vc_camera1"
-            android:layout_width="80dp"
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="352dp"
             android:layout_height="match_parent"
-            android:text="카메라" />
+            android:scaleType="fitXY"
+            app:srcCompat="@drawable/ic_component_58" />
 
-        <Button
-            android:id="@+id/icon_vc_change1"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
             android:layout_weight="0"
-            android:text="전환" />
+            android:gravity="center">
 
-        <Button
-            android:id="@+id/icon_vc_off1"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:text="통화종료" />
+            <ImageButton
+                android:id="@+id/icon_vc_off1"
+                android:layout_width="80dp"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_off"
+                android:background="@android:color/transparent" />
 
-        <Button
-            android:id="@+id/icon_vc_block1"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0"
-            android:text="내 소리 차단" />
-
-        <Button
-            android:id="@+id/icon_vc_speaker1"
-            android:layout_width="80dp"
-            android:layout_height="match_parent"
-            android:layout_weight="0"
-            android:text="스피커" />
-    </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
 </LinearLayout>
