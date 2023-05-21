@@ -76,6 +76,11 @@ class VC_MakingCallActivity  : AppCompatActivity() {
         // vc_block = findViewById<ImageButton>(R.id.icon_vc_block1)
         // vc_speaker = findViewById<ImageButton>(R.id.icon_vc_speaker1)
 
+        vc_off.setOnClickListener() {
+            var intent = Intent(this, CallActivity::class.java)
+            startActivity(intent)
+        }
+
         val surfaceView: SurfaceView = findViewById(R.id.surfaceView1)
         surfaceHolder = surfaceView.holder
         surfaceHolder.addCallback(surfaceCallback)
