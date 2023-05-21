@@ -13,7 +13,7 @@ class C_MakingCallActivity : AppCompatActivity() {
         //3초후 통화 연결 되어 통화중 화면(C_OnThePhoneCallActivity)으로 전환
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, C_OnThePhoneCallActivity::class.java))
-        }, 3000)
+        }, 5000)
         
     }
 }

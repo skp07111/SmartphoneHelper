@@ -166,7 +166,7 @@
         android:layout_marginTop="50dp">
 
         <Button
-            android:id="@+id/icon_video"
+            android:id="@+id/video_call"
             android:layout_width="50dp"
             android:layout_height="60dp"
             android:layout_marginRight="30dp"
@@ -176,7 +176,7 @@
             android:id="@+id/icon_call"
             android:layout_width="50dp"
             android:layout_height="60dp"
-            android:layout_toRightOf="@id/icon_video"
+            android:layout_toRightOf="@id/video_call"
             android:text="통화" />
 
         <Button

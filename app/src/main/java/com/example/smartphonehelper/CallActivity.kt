@@ -2,7 +2,6 @@ package com.example.smartphonehelper
 
 import android.content.Intent
 import android.os.Bundle
-import android.speech.tts.TextToSpeech
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 
@@ -17,7 +16,7 @@ class CallActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_call)
 
-        videoCall = findViewById<Button>(R.id.icon_video)
+        videoCall = findViewById<Button>(R.id.video_call)
         call = findViewById<Button>(R.id.icon_call)
         back = findViewById<Button>(R.id.icon_back)
 
