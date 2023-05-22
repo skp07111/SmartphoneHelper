@@ -2,6 +2,7 @@ package com.example.smartphonehelper
 
 import android.Manifest
 import android.content.Context
+import android.content.DialogInterface
 import android.content.pm.PackageManager
 import android.graphics.*
 import android.graphics.drawable.ColorDrawable
@@ -11,6 +12,7 @@ import android.os.Handler
 import android.util.TypedValue
 import android.view.*
 import android.widget.*
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
@@ -34,6 +36,8 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
     private lateinit var button4: Button
     private lateinit var button5: Button
     private lateinit var button6: Button
+
+    private lateinit var cameraChangeButton: ImageButton
 
     private val buttonStates: MutableMap<Button, Boolean> = mutableMapOf()
     private var clickedButton: Button? = null
@@ -91,6 +95,11 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
             updateButtonStates(button6)
             // 버튼 6 클릭 시 팝업창 표시
             showPopupMessage("사진에 필터를 적용하여 사진 색깔을 다양하게 바꿀 수 있고, 사진을 보정할 수 있습니다.")
+        }
+
+        cameraChangeButton = findViewById(R.id.cameraChangeButton)
+        cameraChangeButton.setOnClickListener {
+            showCameraChangePopup()
         }
 
         surfaceHolder = surfaceView.holder
@@ -165,6 +174,50 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
         closePopupButton.setOnClickListener {
             closePopupMessage()
         }
+    }
+
+    private fun showCameraChangePopup() {
+        val popupMessage = "방금 누른 버튼은 화면 전환 버튼으로,\n실제 카메라 어플에서\n이 버튼을 누르면\n전면 또는 후면 화면으로 전환됩니다."
+        val dialogBuilder = AlertDialog.Builder(this)
+        val layout = LinearLayout(this)
+        layout.orientation = LinearLayout.VERTICAL
+        layout.gravity = Gravity.CENTER
+
+        // 상단 여백을 위한 빈 TextView 추가
+        val topMarginTextView = TextView(this)
+        val topMarginHeight = resources.getDimensionPixelSize(R.dimen.popup_message_top_margin)
+        val layoutParams = LinearLayout.LayoutParams(
+            LinearLayout.LayoutParams.WRAP_CONTENT,
+            topMarginHeight
+        )
+        layout.addView(topMarginTextView, layoutParams)
+
+        val messageTextView = TextView(this)
+        messageTextView.text = popupMessage
+        messageTextView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 22f)
+        messageTextView.setTextColor(Color.BLACK)
+        messageTextView.gravity = Gravity.CENTER // 가운데 정렬 설정
+        val paddingHorizontal = resources.getDimensionPixelSize(R.dimen.popup_message_padding_horizontal)
+        messageTextView.setPadding(paddingHorizontal, 0, paddingHorizontal, 0) // 좌우 여백 설정
+        val lineSpacingExtra = resources.getDimensionPixelSize(R.dimen.popup_message_line_spacing) // 줄 간격 조정
+        messageTextView.setLineSpacing(lineSpacingExtra.toFloat(), 1.0f)
+        layout.addView(messageTextView)
+        dialogBuilder.setView(layout)
+            .setCancelable(false)
+            .setPositiveButton("닫기") { dialog, _ ->
+                dialog.dismiss()
+            }
+        val alert = dialogBuilder.create()
+
+        val titleTextViewId = resources.getIdentifier("alertTitle", "id", "android")
+        val titleTextView = alert.findViewById<TextView>(titleTextViewId)
+        titleTextView?.textSize = 20f
+        titleTextView?.visibility = View.GONE // setTitle 제거
+
+        alert.show()
+
+        val positiveButton = alert.getButton(DialogInterface.BUTTON_POSITIVE)
+        positiveButton.setTextSize(TypedValue.COMPLEX_UNIT_SP, 24f) // 버튼의 글씨 크기를 조정합니다.
     }
 
     private fun captureImage() {
