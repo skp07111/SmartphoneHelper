@@ -30,10 +30,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
-            android:textSize="28sp"
-            android:text="갤러리에 있는 앨범은\n사진을 각각 분류하여\n모아주는 곳입니다."
+            android:textSize="25sp"
+            android:text="앨범은 사진을 각각 분류하여\n모아주는 곳입니다.\n분류 없이 모든 사진을 보고 싶으시면\n왼쪽 하단에 있는 [사진] 글씨를\n눌러보세요."
             android:gravity="center"
-            android:padding="16dp" />
+            android:padding="1dp" />
 
     </RelativeLayout>
 

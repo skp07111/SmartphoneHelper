@@ -21,7 +21,7 @@ class GalleryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gallery)
 
-        showPopupMessage("갤러리에 있는 앨범은\n사진을 각각 분류하여\n모아주는 곳입니다.")
+        showPopupMessage("앨범은 사진을 각각 분류하여\n모아주는 곳입니다.\n분류 없이 모든 사진을 보고 싶으시면\n왼쪽 하단에 있는 [사진] 글씨를\n눌러보세요.")
     }
 
     private fun showPopupMessage(message: String) {
