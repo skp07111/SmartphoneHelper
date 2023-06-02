@@ -24,6 +24,10 @@
         <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/glow_effect.xml" value="0.2065" />
         <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/ic_cameracaptureicon.xml" value="0.203" />
         <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/ic_camerapreviewicon.xml" value="0.2065" />
+        <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/ic_galleryalbumbottomicon.xml" value="0.117" />
+        <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/ic_galleryalbumicon.xml" value="0.117" />
+        <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/ic_galleryalbumimg.xml" value="0.117" />
+        <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/ic_galleryalbumpictureicon.xml" value="0.117" />
         <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/ic_pictureetcicon.xml" value="0.2065" />
         <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/popup_background.xml" value="0.1205" />
         <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/rectangle_3.xml" value="0.2065" />
@@ -37,7 +41,7 @@
         <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_camera_suface_view.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_camera_surface_view.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_camera_tutorial.xml" value="0.24947916666666667" />
-        <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_gallery.xml" value="0.11061946902654868" />
+        <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_gallery.xml" value="0.4" />
         <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_main.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_message.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_message_menu.xml" value="0.24947916666666667" />
