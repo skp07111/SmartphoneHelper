@@ -1,192 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center_horizontal">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/onthephone"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp">
-    </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="010-1234-5678"
-        android:layout_marginTop="100dp"
-        android:textSize="40dp"/>
+    <ImageView
+        android:id="@+id/keypadview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/keypad" />
 
-    <GridLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:columnCount="3"
-        android:layout_marginTop="10dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="1"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:paddingLeft="40dp"
-            android:paddingRight="40dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"/>
+    <Button
+        android:id="@+id/video_call"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="59dp"
+        android:layout_marginEnd="48dp"
+        android:backgroundTint="#00FF0000"
+        android:outlineProvider="none"
+        app:layout_constraintBaseline_toBaselineOf="@+id/icon_call"
+        app:layout_constraintEnd_toStartOf="@+id/icon_call"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="2"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:paddingLeft="40dp"
-            android:paddingRight="40dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"/>
+    <Button
+        android:id="@+id/icon_call"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_marginTop="779dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#00FF0000"
+        android:outlineProvider="none"
+        app:layout_constraintBottom_toTopOf="@+id/btn_recent_call"
+        app:layout_constraintEnd_toStartOf="@+id/icon_back"
+        app:layout_constraintStart_toEndOf="@+id/video_call"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="3"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:paddingLeft="40dp"
-            android:paddingRight="40dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"/>
+    <Button
+        android:id="@+id/icon_back"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="810dp"
+        android:layout_marginEnd="60dp"
+        android:layout_marginBottom="80dp"
+        android:backgroundTint="#00FF0000"
+        android:outlineProvider="none"
+        app:layout_constraintBottom_toTopOf="@+id/btn_phone_book"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/icon_call"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:paddingLeft="40dp"
-            android:paddingRight="40dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"/>
+    <Button
+        android:id="@+id/btn_recent_call"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="218dp"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="5"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:paddingLeft="40dp"
-            android:paddingRight="40dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"/>
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="46dp"
+        android:backgroundTint="#00FF0000"
+        android:outlineProvider="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_phone_book"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/icon_call"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="6"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:paddingLeft="40dp"
-            android:paddingRight="40dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"/>
+    <Button
+        android:id="@+id/btn_phone_book"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="82dp"
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="7"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:paddingLeft="40dp"
-            android:paddingRight="40dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"/>
+        android:layout_marginBottom="46dp"
+        android:backgroundTint="#00FF0000"
+        android:outlineProvider="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btn_recent_call"
+        app:layout_constraintTop_toBottomOf="@+id/icon_back"
+        tools:ignore="SpeakableTextPresentCheck" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="8"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:paddingLeft="40dp"
-            android:paddingRight="40dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="9"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:paddingLeft="40dp"
-            android:paddingRight="40dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="*"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:paddingLeft="40dp"
-            android:paddingRight="40dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:paddingLeft="40dp"
-            android:paddingRight="40dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="#"
-            android:textSize="30dp"
-            android:textStyle="bold"
-            android:paddingLeft="40dp"
-            android:paddingRight="40dp"
-            android:paddingTop="10dp"
-            android:paddingBottom="10dp"/>
-
-    </GridLayout>
-
-    <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp">
-
-        <Button
-            android:id="@+id/video_call"
-            android:layout_width="50dp"
-            android:layout_height="60dp"
-            android:layout_marginRight="30dp"
-            android:text="영상" />
-
-        <Button
-            android:id="@+id/icon_call"
-            android:layout_width="50dp"
-            android:layout_height="60dp"
-            android:layout_toRightOf="@id/video_call"
-            android:text="통화" />
-
-        <Button
-            android:id="@+id/icon_back"
-            android:layout_width="50dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="30dp"
-            android:layout_toRightOf="@id/icon_call"
-            android:text="지움" />
-
-    </RelativeLayout>
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

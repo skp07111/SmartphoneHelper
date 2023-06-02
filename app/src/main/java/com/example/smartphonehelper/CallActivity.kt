@@ -24,6 +24,8 @@ class CallActivity : AppCompatActivity() {
     lateinit var videoCall: Button
     lateinit var call: Button
     lateinit var back: Button
+    lateinit var recentCall: Button
+    lateinit var phoneBook: Button
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -44,6 +46,8 @@ class CallActivity : AppCompatActivity() {
             videoCall = findViewById<Button>(R.id.video_call)
             call = findViewById<Button>(R.id.icon_call)
             back = findViewById<Button>(R.id.icon_back)
+            recentCall = findViewById<Button>(R.id.btn_recent_call)
+            phoneBook = findViewById<Button>(R.id.btn_phone_book)
             tts?.speak(
                 "전화를 걸려면 상대방의 전화번호를 누른 후에 가운데에 있는 녹색 통화버튼을 누르면 됩니다. 전화번호를 지우려면 세번째에 있는 버튼을 누르시면 됩니다.", TextToSpeech.QUEUE_FLUSH, null, null)
             tts?.speak(
@@ -58,6 +62,21 @@ class CallActivity : AppCompatActivity() {
                 val intent = Intent(this, VC_MakingCallActivity::class.java)
                 startActivity(intent)
             }
+            //지우기 버튼 눌렀을 때 tts 안내
+            back.setOnClickListener{
+                tts?.speak("이 버튼을 누르면 입력한 전화번호를 지울 수 있습니다", TextToSpeech.QUEUE_FLUSH, null, null)
+            }
+            //최근 통화 버튼 눌렀을때
+            recentCall.setOnClickListener {
+                val intent = Intent(this, C_RecentCallActivity::class.java)
+                startActivity(intent)
+            }
+            //연락처 눌렀을 때
+            phoneBook.setOnClickListener {
+                val intent = Intent(this, C_PhoneBookActivity::class.java)
+                startActivity(intent)
+            }
+
         }
 
 
