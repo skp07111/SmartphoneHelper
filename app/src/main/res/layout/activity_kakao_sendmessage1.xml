@@ -7,16 +7,16 @@
     android:background="#9ABAD1">
 
     <ImageView
-        android:id="@+id/imageView29"
+        android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="23dp"
+        android:layout_marginTop="661dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView6"
-        app:srcCompat="@drawable/group_4" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/component_51" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/imageView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -26,28 +26,28 @@
         app:srcCompat="@drawable/baseline_arrow_back_24" />
 
     <TextView
-        android:id="@+id/name3"
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="12dp"
         android:layout_marginTop="14dp"
         android:text="김연정"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintStart_toEndOf="@+id/imageView12"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView22"
+        android:id="@+id/imageView14"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="12dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView27"
+        app:layout_constraintEnd_toStartOf="@+id/imageView15"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/baseline_search_24" />
 
     <ImageView
-        android:id="@+id/imageView27"
+        android:id="@+id/imageView15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -57,30 +57,32 @@
         app:srcCompat="@drawable/baseline_menu_24" />
 
     <ImageView
-        android:id="@+id/imageView30"
+        android:id="@+id/imageView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="661dp"
+        android:layout_marginTop="23dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/component_51" />
-
-    <Button
-        android:id="@+id/act_btn3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="3dp"
-        android:background="@android:color/transparent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView30"
-        tools:ignore="SpeakableTextPresentCheck"/>
+        app:layout_constraintTop_toTopOf="@+id/imageView12"
+        app:srcCompat="@drawable/group_4" />
 
     <ImageView
-        android:id="@+id/imageView31"
+        android:id="@+id/imageView20"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
-        app:layout_constraintStart_toStartOf="@+id/act_btn3"
-        app:layout_constraintTop_toTopOf="@+id/act_btn3"
+        app:layout_constraintStart_toStartOf="@+id/act_btn"
+        app:layout_constraintTop_toTopOf="@+id/act_btn"
         app:srcCompat="@drawable/baseline_touch_app_24" />
+
+    <Button
+        android:id="@+id/act_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="58dp"
+        android:layout_marginBottom="1dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpeakableTextPresentCheck"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
