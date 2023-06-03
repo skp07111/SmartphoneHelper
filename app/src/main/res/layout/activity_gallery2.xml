@@ -8,17 +8,17 @@
     tools:context=".GalleryActivity">
 
     <ImageView
-        android:id="@+id/galleryAlbumImg"
+        android:id="@+id/galleryAlbumPicTopImg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="-1dp"
-        android:layout_marginBottom="75dp"
-        app:srcCompat="@drawable/ic_galleryalbumimg" />
+        android:layout_centerInParent="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="-8dp"
+        android:layout_marginBottom="216dp"
+        app:srcCompat="@drawable/ic_galleryalbumpictopimg" />
 
     <RelativeLayout
         android:id="@+id/popupContainer"
@@ -60,20 +60,20 @@
             android:gravity="center"> <!-- 중앙 정렬을 위해 gravity 속성 추가 -->
 
             <ImageButton
-                android:id="@+id/galleryPictureIcon"
+                android:id="@+id/galleryPicturePicTextIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
-                app:srcCompat="@drawable/ic_galleryalbumpictureicon" />
+                app:srcCompat="@drawable/ic_galleryalbumpicturepictexticon" />
 
             <ImageButton
-                android:id="@+id/galleryAlbumTextIcon"
+                android:id="@+id/galleryAlbumPicAlbumTextIcon"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:background="#00FFFFFF"
-                app:srcCompat="@drawable/ic_galleryalbumtexticon" />
+                app:srcCompat="@drawable/ic_galleryalbumpicturealbumtexticon" />
 
             <ImageButton
                 android:id="@+id/galleryStoryIcon"
