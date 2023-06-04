@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
@@ -20,13 +21,13 @@ class CallActivity : AppCompatActivity() {
         Manifest.permission.RECORD_AUDIO,
         Manifest.permission.MODIFY_AUDIO_SETTINGS
     )
-    lateinit var search: Button
-    lateinit var keypad: Button
-    lateinit var videoCall: Button
-    lateinit var call: Button
-    lateinit var back: Button
-    lateinit var recentCall: Button
-    lateinit var phoneBook: Button
+    lateinit var search: ImageButton
+    lateinit var keypad: ImageButton
+    lateinit var videoCall: ImageButton
+    lateinit var call: ImageButton
+    lateinit var back: ImageButton
+    lateinit var recentCall: ImageButton
+    lateinit var phoneBook: ImageButton
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -43,13 +44,13 @@ class CallActivity : AppCompatActivity() {
             } else {
                 Log.e("TTS", "Initialization failed.")
             }
-            search = findViewById<Button>(R.id.btn_phone_search)
-            keypad = findViewById<Button>(R.id.btn_keypad)
-            videoCall = findViewById<Button>(R.id.btn_video_call)
-            call = findViewById<Button>(R.id.btn_call)
-            back = findViewById<Button>(R.id.btn_back)
-            recentCall = findViewById<Button>(R.id.btn_keypad)
-            phoneBook = findViewById<Button>(R.id.btn_phone_book)
+            search = findViewById<ImageButton>(R.id.btn_phone_search)
+            keypad = findViewById<ImageButton>(R.id.btn_keypad)
+            videoCall = findViewById<ImageButton>(R.id.btn_video_call)
+            call = findViewById<ImageButton>(R.id.btn_call)
+            back = findViewById<ImageButton>(R.id.btn_back)
+            recentCall = findViewById<ImageButton>(R.id.btn_keypad)
+            phoneBook = findViewById<ImageButton>(R.id.btn_phone_book)
             tts?.speak(
                 "각 버튼을 눌러주시면, 어떤 기능인지 설명해드리겠습니다", TextToSpeech.QUEUE_FLUSH, null, null)
             tts?.speak(
