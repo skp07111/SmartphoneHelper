@@ -40,12 +40,12 @@
         android:layout_marginEnd="26dp"
         android:layout_marginBottom="40dp"
         android:backgroundTint="#00FBFBFB"
-        android:outlineProvider="none"
+        android:outlineProvider="bounds"
         app:layout_constraintBottom_toTopOf="@+id/button_speaker"
         app:layout_constraintEnd_toStartOf="@+id/button_videocall"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck"/>
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/button_videocall"
@@ -53,7 +53,7 @@
         android:layout_height="70dp"
         android:layout_marginEnd="20dp"
         android:backgroundTint="#00FBFBFB"
-        android:outlineProvider="none"
+        android:outlineProvider="bounds"
         app:layout_constraintBaseline_toBaselineOf="@+id/button_rocord"
         app:layout_constraintEnd_toStartOf="@+id/button_bluetooth"
         app:layout_constraintStart_toEndOf="@+id/button_rocord"
@@ -67,12 +67,12 @@
         android:layout_marginEnd="81dp"
         android:layout_marginBottom="42dp"
         android:backgroundTint="#00FBFBFB"
-        android:outlineProvider="none"
+        android:outlineProvider="bounds"
         app:layout_constraintBottom_toTopOf="@+id/button_keypad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_videocall"
         app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck"/>
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/button_speaker"
@@ -82,12 +82,12 @@
         android:layout_marginEnd="13dp"
         android:layout_marginBottom="197dp"
         android:backgroundTint="#00FBFBFB"
-        android:outlineProvider="none"
+        android:outlineProvider="bounds"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button_blockvoice"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_rocord"
-        tools:ignore="SpeakableTextPresentCheck"/>
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/button_blockvoice"
@@ -96,12 +96,12 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="49dp"
         android:backgroundTint="#00FBFBFB"
-        android:outlineProvider="none"
+        android:outlineProvider="bounds"
         app:layout_constraintBottom_toTopOf="@+id/btn_stopCall"
         app:layout_constraintEnd_toStartOf="@+id/button_keypad"
         app:layout_constraintStart_toEndOf="@+id/button_speaker"
         app:layout_constraintTop_toBottomOf="@+id/button_bluetooth"
-        tools:ignore="SpeakableTextPresentCheck"/>
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/button_keypad"
@@ -110,11 +110,11 @@
         android:layout_marginEnd="73dp"
         android:layout_marginBottom="197dp"
         android:backgroundTint="#00FBFBFB"
-        android:outlineProvider="none"
+        android:outlineProvider="bounds"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/button_blockvoice"
         app:layout_constraintTop_toBottomOf="@+id/button_bluetooth"
-        tools:ignore="SpeakableTextPresentCheck"/>
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

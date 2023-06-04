@@ -18,4 +18,16 @@
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/phonebook_search" />
 
+    <Button
+        android:id="@+id/btn_voice_search"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="604dp"
+        android:backgroundTint="#00FBFBFB"
+        android:outlineProvider="bounds"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

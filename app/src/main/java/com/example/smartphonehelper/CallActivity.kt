@@ -68,6 +68,8 @@ class CallActivity : AppCompatActivity() {
             }
             search.setOnClickListener{
                 tts?.speak("이 버튼을 누르면 연락처를 검색할 수 있습니다.", TextToSpeech.QUEUE_FLUSH, null, null)
+                val intent = Intent(this, C_PhoneBook_SearchActivity::class.java)
+                startActivity(intent)
             }
             //지우기 버튼 눌렀을 때 tts 안내
             back.setOnClickListener{
@@ -75,6 +77,7 @@ class CallActivity : AppCompatActivity() {
             }
             //최근 통화 버튼 눌렀을때
             recentCall.setOnClickListener {
+                tts?.speak("이 버튼을 누르면 최근에 통화한 사람의 목록을 볼 수 있고, 그 사람의 이름을 누르면 바로 통화를 할 수 있습니다. ", TextToSpeech.QUEUE_FLUSH, null, null)
                 val intent = Intent(this, C_RecentCallActivity::class.java)
                 startActivity(intent)
             }

@@ -76,6 +76,18 @@
             android:exported="false"
             android:parentActivityName=".CallActivity" />
         <activity
+            android:name=".C_PhoneBook_SearchActivity"
+            android:exported="false"
+            android:parentActivityName=".CallActivity" />
+        <activity
+            android:name=".C_PhoneBook_Search2Activity"
+            android:exported="false"
+            android:parentActivityName=".CallActivity" />
+        <activity
+            android:name=".C_PhoneBookAddActivity"
+            android:exported="false"
+            android:parentActivityName=".CallActivity" />
+        <activity
             android:name=".CallActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
@@ -96,14 +108,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".TTSActivity"
-            android:exported="true"
-            android:permission="android.permission.BIND_IMS_SERVICE">
-            <intent-filter>
-                <action android:name="android.intent.action.TTS_SERVICE" />
-            </intent-filter>
-        </activity>
+
+
     </application>
 
 </manifest>
