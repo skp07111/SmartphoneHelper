@@ -1,6 +1,7 @@
 package com.example.smartphonehelper
 
 import android.Manifest
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
@@ -49,7 +50,7 @@ class CallActivity : AppCompatActivity() {
             videoCall = findViewById<ImageButton>(R.id.btn_video_call)
             call = findViewById<ImageButton>(R.id.btn_call)
             back = findViewById<ImageButton>(R.id.btn_back)
-            recentCall = findViewById<ImageButton>(R.id.btn_keypad)
+            recentCall = findViewById<ImageButton>(R.id.btn_recent_call)
             phoneBook = findViewById<ImageButton>(R.id.btn_phone_book)
             tts?.speak(
                 "각 버튼을 눌러주시면, 어떤 기능인지 설명해드리겠습니다", TextToSpeech.QUEUE_FLUSH, null, null)
