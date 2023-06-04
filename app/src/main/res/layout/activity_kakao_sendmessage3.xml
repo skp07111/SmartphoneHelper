@@ -67,6 +67,20 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView34"
         app:layout_constraintStart_toStartOf="@+id/imageView32" />
 
+    <TextView
+        android:id="@+id/textView34"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="26dp"
+        android:layout_marginBottom="150dp"
+        android:background="#535353"
+        android:padding="40dp"
+        android:text="메세지 보내기 성공!"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#D1D1D1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
         android:id="@+id/imageView32"
         android:layout_width="wrap_content"
