@@ -65,6 +65,14 @@
             android:exported="false"
             android:parentActivityName=".CallActivity" />
         <activity
+            android:name=".C_RecentCallActivity"
+            android:exported="false"
+            android:parentActivityName=".CallActivity" />
+        <activity
+            android:name=".C_PhoneBookActivity"
+            android:exported="false"
+            android:parentActivityName=".CallActivity" />
+        <activity
             android:name=".CallActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
