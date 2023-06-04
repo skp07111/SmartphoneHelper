@@ -20,7 +20,8 @@ class CallActivity : AppCompatActivity() {
         Manifest.permission.RECORD_AUDIO,
         Manifest.permission.MODIFY_AUDIO_SETTINGS
     )
-
+    lateinit var search: Button
+    lateinit var keypad: Button
     lateinit var videoCall: Button
     lateinit var call: Button
     lateinit var back: Button
@@ -42,14 +43,15 @@ class CallActivity : AppCompatActivity() {
             } else {
                 Log.e("TTS", "Initialization failed.")
             }
-
-            videoCall = findViewById<Button>(R.id.video_call)
-            call = findViewById<Button>(R.id.icon_call)
-            back = findViewById<Button>(R.id.icon_back)
-            recentCall = findViewById<Button>(R.id.btn_recent_call)
+            search = findViewById<Button>(R.id.btn_phone_search)
+            keypad = findViewById<Button>(R.id.btn_keypad)
+            videoCall = findViewById<Button>(R.id.btn_video_call)
+            call = findViewById<Button>(R.id.btn_call)
+            back = findViewById<Button>(R.id.btn_back)
+            recentCall = findViewById<Button>(R.id.btn_keypad)
             phoneBook = findViewById<Button>(R.id.btn_phone_book)
             tts?.speak(
-                "전화를 걸려면 상대방의 전화번호를 누른 후에 가운데에 있는 녹색 통화버튼을 누르면 됩니다. 전화번호를 지우려면 세번째에 있는 버튼을 누르시면 됩니다.", TextToSpeech.QUEUE_FLUSH, null, null)
+                "각 버튼을 눌러주시면, 어떤 기능인지 설명해드리겠습니다", TextToSpeech.QUEUE_FLUSH, null, null)
             tts?.speak(
                 "상대방에게 전화를 걸고 싶으시면 녹색 전화기 모양 버튼을 눌러주시고, 영상통화를 걸고 싶으시면 첫번째 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null)
             // 통화 버튼 눌렀을 때 통화거는중 화면 (C_MakingCallActiviy)으로 전환
@@ -61,6 +63,9 @@ class CallActivity : AppCompatActivity() {
             videoCall.setOnClickListener {
                 val intent = Intent(this, VC_MakingCallActivity::class.java)
                 startActivity(intent)
+            }
+            search.setOnClickListener{
+                tts?.speak("이 버튼을 누르면 연락처를 검색할 수 있습니다.", TextToSpeech.QUEUE_FLUSH, null, null)
             }
             //지우기 버튼 눌렀을 때 tts 안내
             back.setOnClickListener{
@@ -76,6 +81,7 @@ class CallActivity : AppCompatActivity() {
                 val intent = Intent(this, C_PhoneBookActivity::class.java)
                 startActivity(intent)
             }
+
 
         }
 

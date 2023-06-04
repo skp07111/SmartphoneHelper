@@ -3,9 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/onthephone"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <ImageView
         android:id="@+id/keypadview"
@@ -15,82 +14,87 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/keypad" />
+        app:srcCompat="@drawable/call_keypad__1_" />
 
+    <ImageButton
+        android:id="@+id/btn_video_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="40dp"
+        android:backgroundTint="#FEFEFE"
+        app:layout_constraintBottom_toTopOf="@+id/btn_keypad"
+        app:layout_constraintEnd_toEndOf="@+id/btn_keypad"
+        app:srcCompat="@drawable/vector" />
 
-    <Button
-        android:id="@+id/video_call"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="59dp"
-        android:layout_marginEnd="48dp"
-        android:backgroundTint="#00FF0000"
-        android:outlineProvider="none"
-        app:layout_constraintBaseline_toBaselineOf="@+id/icon_call"
-        app:layout_constraintEnd_toStartOf="@+id/icon_call"
-        app:layout_constraintStart_toStartOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <Button
-        android:id="@+id/icon_call"
-        android:layout_width="130dp"
-        android:layout_height="130dp"
-        android:layout_marginTop="779dp"
-        android:layout_marginEnd="48dp"
-        android:layout_marginBottom="50dp"
-        android:backgroundTint="#00FF0000"
-        android:outlineProvider="none"
+    <ImageButton
+        android:id="@+id/btn_call"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="39dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#FEFEFE"
         app:layout_constraintBottom_toTopOf="@+id/btn_recent_call"
-        app:layout_constraintEnd_toStartOf="@+id/icon_back"
-        app:layout_constraintStart_toEndOf="@+id/video_call"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintEnd_toStartOf="@+id/btn_phone_book"
+        app:srcCompat="@drawable/component_1" />
 
-    <Button
-        android:id="@+id/icon_back"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="810dp"
-        android:layout_marginEnd="60dp"
-        android:layout_marginBottom="80dp"
-        android:backgroundTint="#00FF0000"
-        android:outlineProvider="none"
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="38dp"
+        android:backgroundTint="#FEFEFE"
         app:layout_constraintBottom_toTopOf="@+id/btn_phone_book"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/icon_call"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:layout_constraintStart_toEndOf="@+id/btn_call"
+        app:srcCompat="@drawable/vector__1_" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_recent_call"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="218dp"
-
-        android:layout_marginEnd="61dp"
-        android:layout_marginBottom="46dp"
-        android:backgroundTint="#00FF0000"
-        android:outlineProvider="none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="29dp"
+        android:backgroundTint="#FEFEFE"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_phone_book"
+        app:layout_constraintStart_toStartOf="@+id/btn_call"
+        app:srcCompat="@drawable/recnt" />
+
+    <ImageButton
+        android:id="@+id/btn_keypad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="29dp"
+        android:backgroundTint="#FEFEFE"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_recent_call"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/icon_call"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:srcCompat="@drawable/kp" />
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_phone_book"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="82dp"
-
-        android:layout_marginBottom="46dp"
-        android:backgroundTint="#00FF0000"
-        android:outlineProvider="none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="31dp"
+        android:backgroundTint="#FEFEFE"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_recent_call"
-        app:layout_constraintTop_toBottomOf="@+id/icon_back"
-        tools:ignore="SpeakableTextPresentCheck" />
+        app:srcCompat="@drawable/pb" />
 
+    <ImageButton
+        android:id="@+id/btn_phone_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="77dp"
+        android:backgroundTint="#FEFEFE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_search_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
