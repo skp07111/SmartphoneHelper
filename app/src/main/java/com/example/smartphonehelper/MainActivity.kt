@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var mainCamera: Button
     lateinit var mainGallery: Button
     lateinit var mainYoutube: Button
+    lateinit var mainKakaoTalk: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,6 +60,8 @@ class MainActivity : AppCompatActivity() {
             mainGallery = findViewById<Button>(R.id.button_gallery)
             // 유튜브 버튼
             mainYoutube = findViewById<Button>(R.id.button_youtube)
+            // 카카오톡 버튼
+            mainKakaoTalk = findViewById<Button>(R.id.button_kakaotalk)
 
             // 영상통화 버튼 누르면 VideoCallActivity로 전환
             mainVideoCall.setOnClickListener() {
@@ -86,6 +89,12 @@ class MainActivity : AppCompatActivity() {
 
             mainYoutube.setOnClickListener() {
                 var intent = Intent(this, YoutubeMainActivity::class.java)
+                startActivity(intent)
+            }
+
+            // 카카오톡 버튼 누르면 KakaoMain 전환
+            mainKakaoTalk.setOnClickListener() {
+                var intent = Intent(this, KakaoMain::class.java)
                 startActivity(intent)
             }
         }
