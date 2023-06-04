@@ -25,6 +25,10 @@
         android:theme="@style/Theme.SmartphoneHelper"
         tools:targetApi="31">
         <activity
+            android:name=".YoutubeShareActivity"
+            android:exported="false"
+            android:parentActivityName=".YoutubeMenuActivity"/>
+        <activity
             android:name=".YoutubeMenuActivity"
             android:exported="false"
             android:parentActivityName=".YoutubeMainActivity" />
