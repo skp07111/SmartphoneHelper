@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
             android:textSize="25sp"
-            android:text="앨범은 사진을 각각 분류하여\n모아주는 곳입니다.\n분류 없이 모든 사진을 보고 싶으시면\n왼쪽 하단에 있는 [사진] 글씨를\n눌러보세요."
+            android:text="날짜별로 사진을 볼 수 있습니다.\n크게 보려면 사진을 한 번 눌러보세요.\n(회색 사각형들 중 아무거나)"
             android:gravity="center"
             android:padding="1dp" />
 

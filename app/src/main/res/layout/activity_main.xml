@@ -82,4 +82,12 @@
         app:layout_constraintEnd_toStartOf="@+id/button_youtube"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button_videoCall" />
+
+    <Button
+        android:id="@+id/button_playstore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="플레이스토어"
+        tools:layout_editor_absoluteX="33dp"
+        tools:layout_editor_absoluteY="486dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

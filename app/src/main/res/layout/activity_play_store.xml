@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".PlayStoreActivity">
+
+    <ImageView
+        android:id="@+id/playStroeSearchBar"
+        android:layout_width="313dp"
+        android:layout_height="553dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="178dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="-1dp"
+        app:srcCompat="@drawable/playstoreimg1" />
+
+    <RelativeLayout
+        android:id="@+id/popupContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#80000000"
+        android:padding="16dp"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/messageTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:text="검색창을 눌러서 설치하고 싶은 앱을 검색할 수 있어요.\n‘앱 및 게임 검색’으로 표시되어 있는 부분이 검색창입니다."
+            android:gravity="center"
+            android:padding="1dp" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="46dp"
+        android:layout_marginTop="111dp"
+        app:srcCompat="@drawable/ic_playstoresearchbar" />
+
+    <ImageView
+        android:id="@+id/imageView47"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="64dp"
+        app:srcCompat="@drawable/ic_playstoresearchbar2" />
+
+
+</RelativeLayout>

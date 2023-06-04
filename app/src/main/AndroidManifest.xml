@@ -25,9 +25,12 @@
         android:theme="@style/Theme.SmartphoneHelper"
         tools:targetApi="31">
         <activity
+            android:name=".PlayStoreActivity"
+            android:exported="false" />
+        <activity
             android:name=".YoutubeShareActivity"
             android:exported="false"
-            android:parentActivityName=".YoutubeMenuActivity"/>
+            android:parentActivityName=".YoutubeMenuActivity" />
         <activity
             android:name=".GalleryShareActivity"
             android:exported="false" />
