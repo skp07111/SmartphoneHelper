@@ -29,6 +29,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var mainMessage: Button
     lateinit var mainCamera: Button
     lateinit var mainGallery: Button
+    lateinit var mainYoutube: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,6 +57,8 @@ class MainActivity : AppCompatActivity() {
             mainCamera = findViewById<Button>(R.id.button_camera)
             // 갤러리 버튼
             mainGallery = findViewById<Button>(R.id.button_gallery)
+            // 유튜브 버튼
+            mainYoutube = findViewById<Button>(R.id.button_youtube)
 
             // 영상통화 버튼 누르면 VideoCallActivity로 전환
             mainVideoCall.setOnClickListener() {
@@ -81,7 +84,10 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
 
-
+            mainYoutube.setOnClickListener() {
+                var intent = Intent(this, YoutubeMainActivity::class.java)
+                startActivity(intent)
+            }
         }
 
     }
