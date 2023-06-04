@@ -29,6 +29,9 @@
             android:exported="false"
             android:parentActivityName=".YoutubeMenuActivity"/>
         <activity
+            android:name=".GalleryShareActivity"
+            android:exported="false" />
+        <activity
             android:name=".YoutubeMenuActivity"
             android:exported="false"
             android:parentActivityName=".YoutubeMainActivity" />
@@ -36,6 +39,9 @@
             android:name=".YoutubeMainActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Gallery3Activity"
+            android:exported="false" />
         <activity
             android:name=".Gallery2Activity"
             android:exported="false" />
