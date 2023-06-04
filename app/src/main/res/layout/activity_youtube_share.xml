@@ -12,8 +12,96 @@
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/component_80" />
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:stretchColumns="0, 1, 2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" >
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/youtube_button1"
+                android:layout_width="wrap_content"
+                android:layout_height="122.5dp" />
+
+            <Button
+                android:id="@+id/youtube_button2"
+                android:layout_width="wrap_content"
+                android:layout_height="122.5dp"
+                android:background="@android:color/transparent"/>
+
+            <Button
+                android:id="@+id/youtube_button3"
+                android:layout_width="wrap_content"
+                android:layout_height="122.5dp" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/youtube_button4"
+                android:layout_width="wrap_content"
+                android:layout_height="122.5dp" />
+
+            <Button
+                android:id="@+id/youtube_button5"
+                android:layout_width="wrap_content"
+                android:layout_height="122.5dp"
+                android:background="@android:color/transparent"/>
+
+            <Button
+                android:id="@+id/youtube_button6"
+                android:layout_width="wrap_content"
+                android:layout_height="122.5dp" />
+        </TableRow>
+        <TableRow>
+
+            <Button
+                android:id="@+id/youtube_button7"
+                android:layout_width="wrap_content"
+                android:layout_height="122.5dp" />
+
+            <Button
+                android:id="@+id/youtube_button8"
+                android:layout_width="wrap_content"
+                android:layout_height="122.5dp"
+                android:background="@android:color/transparent"/>
+
+            <Button
+                android:id="@+id/youtube_button9"
+                android:layout_width="wrap_content"
+                android:layout_height="122.5dp" />
+        </TableRow>
+        <TableRow>
+
+            <Button
+                android:id="@+id/youtube_button10"
+                android:layout_width="wrap_content"
+                android:layout_height="122.5dp" />
+
+            <Button
+                android:id="@+id/youtube_button11"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"/>
+
+            <Button
+                android:id="@+id/youtube_button12"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent" />
+        </TableRow>
+    </TableLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
