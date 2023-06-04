@@ -1,14 +1,18 @@
 package com.example.smartphonehelper
 
 import android.Manifest
+import android.content.Intent
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.util.Log
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import java.util.Locale
 
 class KakaoMain : AppCompatActivity() {
+    lateinit var btn_to_profile: Button
+
     // tts 권한 설정
     var tts: TextToSpeech? = null
     private val REQUEST_CODE_PERMISSIONS = 1
@@ -23,6 +27,13 @@ class KakaoMain : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kakaofriends)
+
+        //프로필을 터치하면 프로필화면으로 화면전환
+        btn_to_profile = findViewById<Button>(R.id.btn_to_profile)
+        btn_to_profile.setOnClickListener {
+            val intent = Intent(this, KakaoProfile::class.java)
+            startActivity(intent)
+        }
 
         ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS)
         //tts 초기화 설정
