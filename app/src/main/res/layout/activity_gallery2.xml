@@ -15,9 +15,9 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="-8dp"
-        android:layout_marginBottom="216dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="-2dp"
+        android:layout_marginBottom="447dp"
         app:srcCompat="@drawable/ic_galleryalbumpictopimg" />
 
     <RelativeLayout
@@ -41,62 +41,192 @@
 
     </RelativeLayout>
 
-    <LinearLayout
+    <GridLayout
+        android:id="@+id/galleryButtonGrid"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_above="@id/galleryBottomBar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="180dp"
+        android:columnCount="3"
+        android:rowCount="2">
+
+        <ImageButton
+            android:id="@+id/button1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_galleryalbumpreviewimg" />
+
+        <ImageButton
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_galleryalbumpreviewimg" />
+
+        <ImageButton
+            android:id="@+id/button3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_galleryalbumpreviewimg" />
+
+        <ImageButton
+            android:id="@+id/button4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_galleryalbumpreviewimg" />
+
+        <ImageButton
+            android:id="@+id/button5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_galleryalbumpreviewimg" />
+
+        <ImageButton
+            android:id="@+id/button6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_galleryalbumpreviewimg" />
+
+    </GridLayout>
+
+    <GridLayout
+        android:id="@+id/galleryButtonGrid2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/galleryBottomBar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="-1dp"
+        android:layout_marginBottom="28dp"
+        android:columnCount="3"
+        android:rowCount="2">
+
+        <ImageButton
+            android:id="@+id/button7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_galleryalbumpreviewimg" />
+
+        <ImageButton
+            android:id="@+id/button8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_galleryalbumpreviewimg" />
+
+        <ImageButton
+            android:id="@+id/button9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_rowWeight="1"
+            android:layout_columnWeight="1"
+            android:layout_margin="8dp"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_galleryalbumpreviewimg" />
+
+    </GridLayout>
+
+    <LinearLayout
+        android:id="@+id/galleryBottomBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
         android:layout_marginBottom="16dp">
 
         <Space
             android:layout_width="16dp"
             android:layout_height="match_parent" />
 
-        <LinearLayout
-            android:id="@+id/galleryBottomBar"
-            android:layout_width="match_parent"
+        <ImageButton
+            android:id="@+id/galleryPicturePicTextIcon"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"> <!-- 중앙 정렬을 위해 gravity 속성 추가 -->
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_galleryalbumpicturepictexticon" />
 
-            <ImageButton
-                android:id="@+id/galleryPicturePicTextIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#00FFFFFF"
-                app:srcCompat="@drawable/ic_galleryalbumpicturepictexticon" />
+        <ImageButton
+            android:id="@+id/galleryAlbumPicAlbumTextIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_galleryalbumpicturealbumtexticon" />
 
-            <ImageButton
-                android:id="@+id/galleryAlbumPicAlbumTextIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#00FFFFFF"
-                app:srcCompat="@drawable/ic_galleryalbumpicturealbumtexticon" />
+        <ImageButton
+            android:id="@+id/galleryStoryIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_galleryalbumistorycon" />
 
-            <ImageButton
-                android:id="@+id/galleryStoryIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#00FFFFFF"
-                app:srcCompat="@drawable/ic_galleryalbumistorycon" />
-
-            <ImageButton
-                android:id="@+id/galleryMenuIcon"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="#00FFFFFF"
-                app:srcCompat="@drawable/ic_gallerylinemenuicon" />
-
-        </LinearLayout>
+        <ImageButton
+            android:id="@+id/galleryMenuIcon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="#00FFFFFF"
+            app:srcCompat="@drawable/ic_gallerylinemenuicon" />
 
         <Space
             android:layout_width="16dp"
             android:layout_height="match_parent" />
 
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/imageButton45"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25dp"
+        android:layout_marginBottom="182dp"
+        android:background="#00000000"
+        app:srcCompat="@drawable/ic_yesterdayicon" />
 
 </RelativeLayout>
