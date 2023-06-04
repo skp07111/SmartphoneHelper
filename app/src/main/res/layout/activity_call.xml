@@ -7,115 +7,115 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/keypadview"
+        android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/call_keypad__1_"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/call_keypad__2_" />
+
+    <Button
+        android:id="@+id/btn_phone_search"
+        android:layout_width="80dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="420dp"
+        android:backgroundTint="#00FBFBFB"
+        android:outlineProvider="none"
+        app:layout_constraintBottom_toTopOf="@+id/btn_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageButton
+    <Button
+        android:id="@+id/btn_keypad"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="43dp"
+        android:layout_marginEnd="167dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#00FBFBFB"
+        android:outlineProvider="none"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btn_phone_book"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_video_call"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
         android:id="@+id/btn_video_call"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="89dp"
-        android:layout_marginTop="738dp"
-        android:layout_marginEnd="92dp"
-        android:layout_marginBottom="19dp"
-        android:backgroundTint="#FEFEFE"
-        app:layout_constraintBottom_toTopOf="@+id/btn_phone_book"
+        android:layout_marginStart="43dp"
+        android:layout_marginTop="525dp"
+        android:layout_marginEnd="43dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#00FBFBFB"
+        android:outlineProvider="none"
+        app:layout_constraintBottom_toTopOf="@+id/btn_keypad"
         app:layout_constraintEnd_toStartOf="@+id/btn_call"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/vector"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageButton
+    <Button
         android:id="@+id/btn_call"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="738dp"
-        android:layout_marginEnd="77dp"
-        android:layout_marginBottom="19dp"
-        android:backgroundTint="#FEFEFE"
-        app:layout_constraintBottom_toTopOf="@+id/btn_keypad"
+        android:layout_marginTop="525dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="#00FBFBFB"
+        android:outlineProvider="none"
+        app:layout_constraintBottom_toTopOf="@+id/btn_recent_call"
         app:layout_constraintEnd_toStartOf="@+id/btn_back"
         app:layout_constraintStart_toEndOf="@+id/btn_video_call"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/component_1"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageButton
+    <Button
         android:id="@+id/btn_back"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="103dp"
-        android:layout_marginBottom="19dp"
-        android:backgroundTint="#FEFEFE"
-        app:layout_constraintBottom_toTopOf="@+id/btn_recent_call"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="135dp"
+        android:backgroundTint="#00FBFBFB"
+        android:outlineProvider="none"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btn_call"
         app:layout_constraintTop_toBottomOf="@+id/btn_phone_search"
-        app:srcCompat="@drawable/vector__1_"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageButton
+    <Button
         android:id="@+id/btn_recent_call"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="103dp"
-        android:layout_marginBottom="45dp"
-        android:backgroundTint="#FEFEFE"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_phone_book"
-        app:layout_constraintTop_toBottomOf="@+id/btn_back"
-        app:srcCompat="@drawable/recnt"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <ImageButton
-        android:id="@+id/btn_keypad"
         android:layout_width="80dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="45dp"
-        android:backgroundTint="#FEFEFE"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#00FBFBFB"
+        android:outlineProvider="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_call"
-        app:srcCompat="@drawable/kp"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageButton
+    <Button
         android:id="@+id/btn_phone_book"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="89dp"
-        android:layout_marginEnd="249dp"
-        android:layout_marginBottom="45dp"
-        android:backgroundTint="#FEFEFE"
+        android:layout_height="80dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#00FBFBFB"
+        android:outlineProvider="none"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_recent_call"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_video_call"
-        app:srcCompat="@drawable/pb"
-        tools:ignore="SpeakableTextPresentCheck" />
-
-    <ImageButton
-        android:id="@+id/btn_phone_search"
-        android:layout_width="80dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="34dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginBottom="624dp"
-        android:backgroundTint="#FEFEFE"
-        app:layout_constraintBottom_toTopOf="@+id/btn_back"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baseline_search_24"
+        app:layout_constraintStart_toEndOf="@+id/btn_keypad"
         tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

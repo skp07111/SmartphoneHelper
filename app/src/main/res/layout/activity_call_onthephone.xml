@@ -57,7 +57,7 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/button_rocord"
         app:layout_constraintEnd_toStartOf="@+id/button_bluetooth"
         app:layout_constraintStart_toEndOf="@+id/button_rocord"
-        tools:ignore="SpeakableTextPresentCheck"/>
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/button_bluetooth"
