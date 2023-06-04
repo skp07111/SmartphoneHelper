@@ -18,7 +18,38 @@
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/component_80" />
 
+    <LinearLayout
+        android:id="@+id/popupContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="450dp"
+        android:background="#80000000"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/popupMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/closePopupButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="닫기"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
     <TableLayout
+        android:id="@+id/tableLayout"
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:stretchColumns="0, 1, 2"
@@ -27,25 +58,27 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" >
+        app:layout_constraintVertical_bias="1.0">
 
         <TableRow>
 
             <Button
                 android:id="@+id/youtube_button1"
                 android:layout_width="wrap_content"
-                android:layout_height="122.5dp" />
+                android:layout_height="122.5dp"
+                android:background="@android:color/transparent" />
 
             <Button
                 android:id="@+id/youtube_button2"
                 android:layout_width="wrap_content"
                 android:layout_height="122.5dp"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent" />
 
             <Button
                 android:id="@+id/youtube_button3"
                 android:layout_width="wrap_content"
-                android:layout_height="122.5dp" />
+                android:layout_height="122.5dp"
+                android:background="@android:color/transparent" />
         </TableRow>
 
         <TableRow>
@@ -53,54 +86,62 @@
             <Button
                 android:id="@+id/youtube_button4"
                 android:layout_width="wrap_content"
-                android:layout_height="122.5dp" />
+                android:layout_height="122.5dp"
+                android:background="@android:color/transparent" />
 
             <Button
                 android:id="@+id/youtube_button5"
                 android:layout_width="wrap_content"
                 android:layout_height="122.5dp"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent" />
 
             <Button
                 android:id="@+id/youtube_button6"
                 android:layout_width="wrap_content"
-                android:layout_height="122.5dp" />
+                android:layout_height="122.5dp"
+                android:background="@android:color/transparent" />
         </TableRow>
+
         <TableRow>
 
             <Button
                 android:id="@+id/youtube_button7"
                 android:layout_width="wrap_content"
-                android:layout_height="122.5dp" />
+                android:layout_height="122.5dp"
+                android:background="@android:color/transparent" />
 
             <Button
                 android:id="@+id/youtube_button8"
                 android:layout_width="wrap_content"
                 android:layout_height="122.5dp"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent" />
 
             <Button
                 android:id="@+id/youtube_button9"
                 android:layout_width="wrap_content"
-                android:layout_height="122.5dp" />
+                android:layout_height="122.5dp"
+                android:background="@android:color/transparent" />
         </TableRow>
+
         <TableRow>
 
             <Button
                 android:id="@+id/youtube_button10"
                 android:layout_width="wrap_content"
-                android:layout_height="122.5dp" />
+                android:layout_height="122.5dp"
+                android:background="@android:color/transparent" />
 
             <Button
                 android:id="@+id/youtube_button11"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:background="@android:color/transparent"/>
+                android:background="@android:color/transparent" />
 
             <Button
                 android:id="@+id/youtube_button12"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent" />
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent" />
         </TableRow>
     </TableLayout>
 
