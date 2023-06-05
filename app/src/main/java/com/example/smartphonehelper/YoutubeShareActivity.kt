@@ -7,6 +7,7 @@ import android.util.TypedValue
 import android.view.View
 import android.widget.Button
 import android.widget.LinearLayout
+import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.ColorUtils
@@ -25,6 +26,8 @@ class YoutubeShareActivity : AppCompatActivity() {
     lateinit var youtubeButton11 : Button
     lateinit var youtubeButton12 : Button
     private var clickedButton: Button? = null
+
+    private lateinit var popupContainer: RelativeLayout
     
     
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -114,6 +117,8 @@ class YoutubeShareActivity : AppCompatActivity() {
             // 버튼 12 클릭 시 팝업창 표시
             showPopupMessage("동영상 링크를 Wi-Fi 다이렉트로 다른 사람들에게 공유할 수 있는 버튼입니다.")
         }
+
+        showPopupMessage2("빨간색 테두리의 버튼들을 하나씩 눌러보세요!")
     }
 
     private fun updateButtonStates(button: Button) {
@@ -171,4 +176,11 @@ class YoutubeShareActivity : AppCompatActivity() {
         }
     }
 
+    private fun showPopupMessage2(message: String) {
+        popupContainer = findViewById(R.id.popupContainer5)
+        val messageTextView = findViewById<TextView>(R.id.messageTextView)
+
+        messageTextView.text = message
+        popupContainer.visibility = View.VISIBLE
+    }
 }

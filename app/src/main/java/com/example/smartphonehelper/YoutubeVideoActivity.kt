@@ -5,16 +5,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.TypedValue
 import android.view.View
-import android.widget.Button
-import android.widget.ImageButton
-import android.widget.LinearLayout
-import android.widget.TextView
+import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.ColorUtils
 
 class YoutubeVideoActivity : AppCompatActivity() {
     lateinit var subscribeButton : ImageButton
     private var clickedButton: ImageButton? = null
+
+    private lateinit var popupContainer: RelativeLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,6 +26,8 @@ class YoutubeVideoActivity : AppCompatActivity() {
             // 구독 버튼 클릭 시 팝업창 표시
             showPopupMessage("이 버튼을 누르면 해당 채널을 구독할 수 있습니다.")
         }
+
+        showPopupMessage2("빨간색 테두리의 버튼을 눌러보세요!")
     }
 
     private fun updateButtonStates(button: ImageButton) {
@@ -82,5 +83,13 @@ class YoutubeVideoActivity : AppCompatActivity() {
         closePopupButton.setOnClickListener {
             closePopupMessage()
         }
+    }
+
+    private fun showPopupMessage2(message: String) {
+        popupContainer = findViewById(R.id.popupContainer4)
+        val messageTextView = findViewById<TextView>(R.id.messageTextView)
+
+        messageTextView.text = message
+        popupContainer.visibility = View.VISIBLE
     }
 }
