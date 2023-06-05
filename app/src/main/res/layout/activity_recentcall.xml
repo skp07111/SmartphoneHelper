@@ -18,13 +18,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/recentcall" />
+
     <LinearLayout
         android:id="@+id/popupContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#80000000"
         android:orientation="vertical"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="150dp"
         android:padding="16dp"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="parent"
