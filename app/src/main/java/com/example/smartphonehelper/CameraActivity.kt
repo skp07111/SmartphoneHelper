@@ -9,6 +9,8 @@ import android.graphics.drawable.ColorDrawable
 import android.hardware.Camera
 import android.os.Bundle
 import android.os.Handler
+import android.speech.tts.TextToSpeech
+import android.util.Log
 import android.util.TypedValue
 import android.view.*
 import android.widget.*
@@ -18,8 +20,20 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.ColorUtils
 import java.io.IOException
+import java.util.*
 
 class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
+
+    // tts 권한 설정
+    var tts: TextToSpeech? = null
+    private val REQUEST_CODE_PERMISSIONS = 1
+
+    //권한 요청 목록
+    private val REQUIRED_PERMISSIONS = arrayOf(
+        Manifest.permission.INTERNET,
+        Manifest.permission.RECORD_AUDIO,
+        Manifest.permission.MODIFY_AUDIO_SETTINGS
+    )
 
     private var camera: Camera? = null
     private var surfaceHolder: SurfaceHolder? = null
@@ -47,6 +61,20 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_camera)
+
+        //tts 초기화 설정
+        tts = TextToSpeech(applicationContext) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                val result = tts?.setLanguage(Locale.KOREAN)
+                if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                    Log.e("TTS", "Korean language is not supported.")
+                }
+            } else {
+                Log.e("TTS", "Initialization failed.")
+            }
+            tts?.speak("사진 촬영을 하시려면 하단 중앙에 위치한 동그란 하얀색 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null)
+        }
+
         val surfaceView = findViewById<SurfaceView>(R.id.cameraPreview)
         captureButton = findViewById(R.id.captureButton)
         capturedImage = findViewById(R.id.capturedImage)
@@ -65,36 +93,42 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
             updateButtonStates(button1)
             // 버튼 1 클릭 시 팝업창 표시
             showPopupMessage("실제 카메라 어플에서 이 버튼을 누르면 다양한 카메라 설정 기능들이 나타납니다.")
+            tts?.speak("실제 카메라 어플에서 이 버튼을 누르면 다양한 카메라 설정 기능들이 나타납니다.", TextToSpeech.QUEUE_FLUSH, null, null)
         }
 
         button2.setOnClickListener {
             updateButtonStates(button2)
             // 버튼 2 클릭 시 팝업창 표시
             showPopupMessage("카메라 플래시(꺼짐/자동/켜짐) 기능을 이용할 수 있는 버튼입니다. 플래시란 순간적으로 강한 빛을 내어서 촬영 장면을 밝히는 것을 말합니다.")
+            tts?.speak("카메라 플래시 기능을 이용할 수 있는 버튼입니다. 플래시란 순간적으로 강한 빛을 내어서 촬영 장면을 밝히는 것을 말합니다.", TextToSpeech.QUEUE_FLUSH, null, null)
         }
 
         button3.setOnClickListener {
             updateButtonStates(button3)
             // 버튼 1 클릭 시 팝업창 표시
             showPopupMessage("타이머 기능(켜짐/꺼짐)을 이용할 수 있는 버튼입니다.")
+            tts?.speak("타이머 기능을 이용할 수 있는 버튼입니다.", TextToSpeech.QUEUE_FLUSH, null, null)
         }
 
         button4.setOnClickListener {
             updateButtonStates(button4)
             // 버튼 4 클릭 시 팝업창 표시
             showPopupMessage("화면 비율을 설정할 수 있는 버튼입니다.")
+            tts?.speak("화면 비율을 설정할 수 있는 버튼입니다.", TextToSpeech.QUEUE_FLUSH, null, null)
         }
 
         button5.setOnClickListener {
             updateButtonStates(button5)
             // 버튼 1 클릭 시 팝업창 표시
             showPopupMessage("촬영 버튼을 누르는 순간 누르기 전 2초 정도 간의 촬영이 됩니다.")
+            tts?.speak("촬영 버튼을 누르는 순간 누르기 전 2초 정도 간의 촬영이 됩니다.", TextToSpeech.QUEUE_FLUSH, null, null)
         }
 
         button6.setOnClickListener {
             updateButtonStates(button6)
             // 버튼 6 클릭 시 팝업창 표시
             showPopupMessage("사진에 필터를 적용하여 사진 색깔을 다양하게 바꿀 수 있고, 사진을 보정할 수 있습니다.")
+            tts?.speak("사진에 필터를 적용하여 사진 색깔을 다양하게 바꿀 수 있고, 사진을 보정할 수 있습니다.", TextToSpeech.QUEUE_FLUSH, null, null)
         }
 
         cameraChangeButton = findViewById(R.id.cameraChangeButton)
@@ -149,6 +183,9 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
 
         clickedButton = null
         applyGrayFilter()
+
+        // TTS 음성 중단
+        tts?.stop()
     }
 
     private fun showPopupMessage(message: String) {
@@ -177,7 +214,8 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
     }
 
     private fun showCameraChangePopup() {
-        val popupMessage = "방금 누른 버튼은 화면 전환 버튼으로,\n실제 카메라 어플에서\n이 버튼을 누르면\n전면 또는 후면 화면으로 전환됩니다."
+        val popupMessage = "방금 누른 버튼은 화면 전환 버튼으로, 실제 카메라 어플에서 이 버튼을 누르면 전면 또는 후면 화면으로 전환됩니다."
+        tts?.speak("방금 누른 버튼은 화면 전환 버튼으로, 실제 카메라 어플에서 이 버튼을 누르면 전면 또는 후면 화면으로 전환됩니다. 이해하셨으면 닫기를 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null)
         val dialogBuilder = AlertDialog.Builder(this)
         val layout = LinearLayout(this)
         layout.orientation = LinearLayout.VERTICAL
@@ -206,6 +244,8 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
             .setCancelable(false)
             .setPositiveButton("닫기") { dialog, _ ->
                 dialog.dismiss()
+                // TTS 음성 중단
+                tts?.stop()
             }
         val alert = dialogBuilder.create()
 
@@ -251,6 +291,7 @@ class CameraActivity : AppCompatActivity(), SurfaceHolder.Callback {
     private fun showCaptureSuccessMessage() {
         captureMessage.visibility = View.VISIBLE
         captureMessage.text = "사진 촬영에 성공하셨습니다!\n잘하셨어요.\n(해당 사진은 연습용으로\n앨범에 저장되지 않습니다.)"
+        tts?.speak("사진 촬영에 성공하셨습니다!", TextToSpeech.QUEUE_FLUSH, null, null)
 
         // 5초 후에 메시지를 숨김
         Handler().postDelayed({
