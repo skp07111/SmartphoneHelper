@@ -14,10 +14,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintVertical_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/phonebook" />
+        app:srcCompat="@drawable/pb1" />
 
     <Button
         android:id="@+id/btn_add_phone"
@@ -26,30 +26,23 @@
         android:layout_marginEnd="84dp"
         android:layout_marginBottom="632dp"
         android:backgroundTint="#00FBFBFB"
-        android:outlineProvider="none"
+        android:outlineProvider="bounds"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <ImageView
-        android:id="@+id/imageView72"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="11dp"
-        android:layout_marginEnd="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/btn_add_phone"
-        app:layout_constraintTop_toTopOf="@+id/btn_add_phone"
-        app:srcCompat="@drawable/rectangle_92" />
+
     <LinearLayout
         android:id="@+id/popupContainer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="550dp"
         android:background="#80000000"
         android:orientation="vertical"
         android:padding="16dp"
         android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -60,9 +53,10 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="1dp"
-            android:text="네모 테두리 버튼을 눌러 주시면, 기능에 대해 설명해드립니다"
+            android:text="네모 테두리를 눌러주세요 \n각 기능을 음성으로 설명해드려요!"
             android:textColor="#FFFFFF"
-            android:textSize="25sp" />
+            android:textSize="25sp"
+            />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

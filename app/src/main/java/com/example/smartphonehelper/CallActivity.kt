@@ -61,7 +61,7 @@ class CallActivity : AppCompatActivity() {
         recentCall = findViewById<Button>(R.id.btn_recent_call)
         phoneBook = findViewById<Button>(R.id.btn_phone_book)
 
-        showPopupMessage("빨간 테두리를 눌러주세요! 기능을 음성으로 설명해드려요!")
+        showPopupMessage("빨간 테두리를 눌러주세요.\n 기능을 음성으로 설명해드려요")
 
         // 통화 버튼 눌렀을 때 통화거는중 화면 (C_MakingCallActiviy)으로 전환
         call.setOnClickListener {
