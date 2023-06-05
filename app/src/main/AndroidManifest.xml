@@ -100,6 +100,14 @@
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
+            android:name=".Helper"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Helper2"
+            android:exported="false"
+            android:parentActivityName=".Helper" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

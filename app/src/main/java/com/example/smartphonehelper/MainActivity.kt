@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var mainYoutube: Button
     lateinit var mainKakaoTalk: Button
     lateinit var mainPlayStore: Button
-
+    lateinit var mainHelper: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -65,6 +65,9 @@ class MainActivity : AppCompatActivity() {
             mainKakaoTalk = findViewById<Button>(R.id.button_kakaotalk)
             // 플레이스토어 버튼
             mainPlayStore = findViewById<Button>(R.id.button_playstore)
+
+            //도우미(구글 어시스턴스)버튼
+            mainHelper = findViewById<Button>(R.id.button_helper)
 
             // 영상통화 버튼 누르면 VideoCallActivity로 전환
             mainVideoCall.setOnClickListener() {
@@ -104,6 +107,11 @@ class MainActivity : AppCompatActivity() {
             // 플레이스토어 버튼 누르면 PlayStoreActivity 전환
             mainPlayStore.setOnClickListener() {
                 var intent = Intent(this, PlayStoreActivity::class.java)
+                startActivity(intent)
+            }
+            // 영상통화 버튼 누르면 VideoCallActivity로 전환
+            mainHelper.setOnClickListener() {
+                var intent = Intent(this, Helper::class.java)
                 startActivity(intent)
             }
         }
