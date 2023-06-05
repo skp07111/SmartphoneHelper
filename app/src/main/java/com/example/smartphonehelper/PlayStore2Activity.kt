@@ -1,27 +1,19 @@
 package com.example.smartphonehelper
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.ImageButton
 import android.widget.RelativeLayout
 import android.widget.TextView
 
-class PlayStoreActivity : AppCompatActivity() {
+class PlayStore2Activity : AppCompatActivity() {
     private lateinit var popupContainer: RelativeLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_play_store)
+        setContentView(R.layout.activity_play_store2)
 
-        showPopupMessage("검색창에서 설치하고 싶은 앱을 검색할 수 있어요.\n빨간색 테두리 부분을 눌러보세요.")
-
-        val playStoreSearchBar = findViewById<ImageButton>(R.id.playStoreSearchBar)
-        playStoreSearchBar.setOnClickListener {
-            val intent = Intent(this, PlayStore2Activity::class.java)
-            startActivity(intent)
-        }
+        showPopupMessage("왼쪽 상단에 [마이크] 모양 버튼을 눌러서 음성 검색을 할 수 있어요.\n한 번 눌러보세요.")
     }
 
     private fun showPopupMessage(message: String) {

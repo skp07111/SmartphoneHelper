@@ -25,6 +25,9 @@
         android:theme="@style/Theme.SmartphoneHelper"
         tools:targetApi="31">
         <activity
+            android:name=".PlayStore2Activity"
+            android:exported="false" />
+        <activity
             android:name=".PlayStoreActivity"
             android:exported="false" />
         <activity
@@ -121,9 +124,9 @@
             android:exported="false"
             android:parentActivityName=".MainActivity" />
         <activity
-        android:name=".KakaoProfile"
-        android:exported="false"
-        android:parentActivityName=".KakaoMain" />
+            android:name=".KakaoProfile"
+            android:exported="false"
+            android:parentActivityName=".KakaoMain" />
         <activity
             android:name=".KakaoMessage1"
             android:exported="false"
@@ -136,7 +139,6 @@
             android:name=".KakaoMessage3"
             android:exported="false"
             android:parentActivityName=".KakaoMEssage2" />
-
     </application>
 
 </manifest>
