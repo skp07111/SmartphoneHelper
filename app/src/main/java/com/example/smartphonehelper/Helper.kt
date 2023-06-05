@@ -81,8 +81,6 @@ class Helper : AppCompatActivity() {
                     null
                 )
                 showPopupMessage("이 버튼을 누르면 이전에 봤던 화면들의 목록을 볼 수 있습니다.")
-                val intent = Intent(this, Helper2::class.java)
-                startActivity(intent)
             }
 
         }
