@@ -3,7 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/glow_effect.xml" value="0.2915" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/ic_component89.xml" value="0.248" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/ic_component_71.xml" value="0.1" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/ic_component_87.xml" value="0.248" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/ic_component_88.xml" value="0.248" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/ic_property_1_default__1_.xml" value="0.264" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/ic_youtube.xml" value="0.336" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/ic_youtube_1.xml" value="0.319" />
@@ -11,20 +15,27 @@
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_call_makingcall.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_call_onthephone.xml" value="0.4" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_camera.xml" value="0.4" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_gallery.xml" value="0.35462962962962963" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_helper.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_helper2.xml" value="0.36216779572694113" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_kakaofriends.xml" value="0.3338541666666667" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_kakaoprofile.xml" value="0.3338541666666667" />
-        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_main.xml" value="0.2337962962962963" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_message.xml" value="0.17135416666666667" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_recentcall.xml" value="0.35462962962962963" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_vc_makingcall.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_vc_onthephone.xml" value="0.3338541666666667" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_video_call.xml" value="0.24583333333333332" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_videocall_makingcall.xml" value="0.1" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_writethemessage.xml" value="0.3338541666666667" />
-        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_youtube_main.xml" value="0.3564102564102564" />
-        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_youtube_menu.xml" value="0.2986111111111111" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_youtube_main.xml" value="0.1" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_youtube_menu.xml" value="0.1" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_youtube_search.xml" value="0.3289817232375979" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_youtube_share.xml" value="0.35462962962962963" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_youtube_video.xml" value="0.26944444444444443" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/content_youtube_search.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/fragment_first.xml" value="0.35462962962962963" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/popup_message.xml" value="0.35462962962962963" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1995" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.1915" />
         <entry key="..\:/Users/juwon/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2065" />
@@ -64,7 +75,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_17" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
