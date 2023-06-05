@@ -38,7 +38,8 @@ class MessageActivity : AppCompatActivity(){  //메세지보내기 기능 메인
                 Log.e("TTS", "Initialization failed.")
             }
             tts?.speak(
-                "하단의 말풍선 그림을 눌러보세요.", TextToSpeech.QUEUE_FLUSH, null, null
+                "메세지를 보내려면 기존에 있던 대화방에 들어가거나 직접 번호를 입력하여 메세지를 보낼 수 있습니다." +
+                        "아래의 십자 버튼을 눌러 대화방을 추가해봅시다.", TextToSpeech.QUEUE_FLUSH, null, null
             )
         }
 
