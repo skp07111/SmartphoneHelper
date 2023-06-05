@@ -26,13 +26,20 @@
         tools:targetApi="31">
         <activity
             android:name=".PlayStore4Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".PlayStore3Activity"/>
         <activity
             android:name=".PlayStore3Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".PlayStore2Activity"/>
+        <activity
+            android:name=".PlayStore2Activity"
+            android:exported="false"
+            android:parentActivityName=".PlayStoreActivity"/>
         <activity
             android:name=".PlayStoreActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".YoutubeVideoActivity"
             android:exported="false"
@@ -47,7 +54,8 @@
             android:parentActivityName=".YoutubeMenuActivity" />
         <activity
             android:name=".GalleryShareActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Gallery3Activity" />
         <activity
             android:name=".YoutubeMenuActivity"
             android:exported="false"
@@ -58,13 +66,16 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Gallery3Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".Gallery2Activity" />
         <activity
             android:name=".Gallery2Activity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".GalleryActivity"/>
         <activity
             android:name=".GalleryActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".VC_OnThePhoneCallActivity"
             android:exported="false"
@@ -104,7 +115,7 @@
         <activity
             android:name=".CallActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MessageActivity"
             android:exported="false"
