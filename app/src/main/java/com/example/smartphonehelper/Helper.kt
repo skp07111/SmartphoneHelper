@@ -21,6 +21,8 @@ class Helper : AppCompatActivity() {
         Manifest.permission.MODIFY_AUDIO_SETTINGS
     )
     lateinit var b_helper: Button
+    lateinit var b_back: Button
+    lateinit var b_list: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_helper)
@@ -38,13 +40,13 @@ class Helper : AppCompatActivity() {
             b_helper = findViewById<Button>(R.id.btn_helper)
 
             tts?.speak(
-                "네모가 쳐진 네모 모양 버튼을 꾹 눌러주세요. 그러면 도우미가 켜집니다 ", TextToSpeech.QUEUE_FLUSH, null, null
+                "네모 테두리의 버튼들을 눌러주시면 기능을 설명해 드립니다 ", TextToSpeech.QUEUE_FLUSH, null, null
             )
 
             //
             b_helper.setOnClickListener {
                 tts?.speak(
-                    "이 도우미에게 지도 앱을 켜달라고 할 수도있고, 오늘 날씨를 물어볼 수 있습니다. 만약 찾으려는 앱이 어디있는지 잘 모르시다면 이 버튼을 꾹 누르시고 그 후에 모르는 걸 물어보세요",
+                    "이 버튼은 홈 버튼입니다. 이 버튼을 가볍게 누르면 맨처음 화면으로 돌아갑니다. 만약 이 버튼을 꾹 누르면 보시는 것 같이 도우미 화면이 뜹니다. 도우미에게 지도 앱을 켜달라고 할 수도있고, 오늘 날씨를 물어볼 수 있습니다. 만약 찾으려는 앱이 어디있는지 잘 모르시다면 이 버튼을 꾹 누르시고 그 후에 모르는 걸 물어보세요",
                     TextToSpeech.QUEUE_FLUSH,
                     null,
                     null
@@ -52,6 +54,26 @@ class Helper : AppCompatActivity() {
                 val intent = Intent(this, Helper2::class.java)
                 startActivity(intent)
             }
+            b_back.setOnClickListener {
+                tts?.speak(
+                    "이 버튼을 누르면 바로 이전 화면으로 되돌아갑니다.",
+                    TextToSpeech.QUEUE_FLUSH,
+                    null,
+                    null
+                )
+
+            }
+            b_list.setOnClickListener {
+                tts?.speak(
+                    "이 버튼을 누르면 이전에 봤던 화면들의 목록을 볼 수 있습니다.",
+                    TextToSpeech.QUEUE_FLUSH,
+                    null,
+                    null
+                )
+                val intent = Intent(this, Helper2::class.java)
+                startActivity(intent)
+            }
+
         }
     }
 }

@@ -18,6 +18,30 @@
         app:srcCompat="@drawable/main_bottom_navigationbar" />
 
     <Button
+        android:id="@+id/btn_list"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="288dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#00FBFBFB"
+        android:outlineProvider="paddedBounds"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
+        android:id="@+id/btn_pre_back"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="24dp"
+        android:backgroundTint="#00FBFBFB"
+        android:outlineProvider="paddedBounds"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <Button
         android:id="@+id/btn_helper"
         android:layout_width="0dp"
         android:layout_height="80dp"
