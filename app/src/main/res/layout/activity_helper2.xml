@@ -16,17 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/main_bottom_navigationbar" />
-
-    <ImageView
-        android:id="@+id/imageView52"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginBottom="57dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/kakaotalk_20230605_172226040_02" />
+        app:srcCompat="@drawable/helper2" />
 
     <LinearLayout
         android:id="@+id/popupContainer"
@@ -46,7 +36,7 @@
         <TextView
             android:id="@+id/messageTextView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:gravity="center"
             android:padding="1dp"
             android:text="네모 테두리를 눌러주세요 \n각 기능을 음성으로 설명해드려요!"
