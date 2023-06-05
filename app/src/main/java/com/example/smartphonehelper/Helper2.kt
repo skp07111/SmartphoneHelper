@@ -35,10 +35,9 @@ class Helper2 : AppCompatActivity() {
             } else {
                 Log.e("TTS", "Initialization failed.")
             }
-            b_helper = findViewById<Button>(R.id.btn_helper)
 
             tts?.speak(
-                "도우미가 켜졌습니다. 메세지를 보내고 ", TextToSpeech.QUEUE_FLUSH, null, null
+                "도우미가 켜졌습니다. 메세지를 보내고 싶으시면 메세지를 보내줘라고 말씀하세요. 유튜브를 열고싶으면 유튜브를 열여줘라고 말씀해보세요 ", TextToSpeech.QUEUE_FLUSH, null, null
             )
 
 
