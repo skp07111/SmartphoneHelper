@@ -21,21 +21,19 @@
     <LinearLayout
         android:id="@+id/popupContainer"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
         android:background="#80000000"
         android:orientation="vertical"
         android:padding="16dp"
         android:visibility="gone"
-        app:layout_constraintBottom_toTopOf="parent"
-        app:layout_constraintEnd_toStartOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
 
         <TextView
             android:id="@+id/messageTextView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:gravity="center"
             android:padding="1dp"
             android:text="네모 테두리를 눌러주세요 \n각 기능을 음성으로 설명해드려요!"
