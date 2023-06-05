@@ -15,7 +15,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/main_bottom_navigationBar" />
+        app:srcCompat="@drawable/main_bottom_navigationbar" />
 
     <Button
         android:id="@+id/btn_helper"
