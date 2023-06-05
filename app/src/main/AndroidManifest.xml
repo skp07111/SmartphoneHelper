@@ -122,6 +122,41 @@
             android:exported="false"
             android:parentActivityName=".Helper" />
         <activity
+            android:name=".KakaoMain"
+            android:exported="false"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".KakaoProfile"
+            android:exported="false" />
+        <activity
+            android:name=".KakaoMessage1"
+            android:exported="false" />
+        <activity
+            android:name=".KakaoMessage2"
+            android:exported="false" />
+        <activity
+            android:name=".KakaoMessage3"
+            android:exported="false" />
+        <activity
+            android:name=".KakaoPhoto1"
+            android:exported="false" />
+        <activity
+            android:name=".KakaoPhoto2"
+            android:exported="false" />
+        <activity
+            android:name=".KakaoPhoto3"
+            android:exported="false" />
+        <activity
+            android:name=".KakaoPhoto4"
+            android:exported="false" />
+        <activity
+            android:name=".MessageWrite"
+            android:exported="false" />
+        <activity
+            android:name=".MessageSend"
+            android:exported="false" />
+
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -130,26 +165,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".KakaoMain"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
-        <activity
-        android:name=".KakaoProfile"
-        android:exported="false"
-        android:parentActivityName=".KakaoMain" />
-        <activity
-            android:name=".KakaoMessage1"
-            android:exported="false"
-            android:parentActivityName=".KakaoProfile" />
-        <activity
-            android:name=".KakaoMessage2"
-            android:exported="false"
-            android:parentActivityName=".KakaoMessage1" />
-        <activity
-            android:name=".KakaoMessage3"
-            android:exported="false"
-            android:parentActivityName=".KakaoMessage2" />
 
     </application>
 
