@@ -90,4 +90,17 @@
         android:text="플레이스토어"
         tools:layout_editor_absoluteX="33dp"
         tools:layout_editor_absoluteY="486dp" />
+
+    <Button
+        android:id="@+id/button_bixb"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="34dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="258dp"
+        android:text="빅스비"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/button_playstore"
+        app:layout_constraintTop_toBottomOf="@+id/button_youtube"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>
