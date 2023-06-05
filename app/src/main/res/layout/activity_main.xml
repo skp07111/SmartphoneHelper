@@ -6,101 +6,75 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/button_videoCall"
+    <ImageView
+        android:id="@+id/youtube_main"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginTop="259dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="34dp"
-        android:text="통화"
-        app:layout_constraintBottom_toTopOf="@+id/button_kakaotalk"
-        app:layout_constraintEnd_toStartOf="@+id/button_message"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_gallery"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="258dp"
-        android:text="갤러리"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_youtube"
-        app:layout_constraintTop_toBottomOf="@+id/button_camera" />
-
-    <Button
-        android:id="@+id/button_youtube"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="258dp"
-        android:text="유튜브"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_gallery"
-        app:layout_constraintStart_toEndOf="@+id/button_kakaotalk"
-        app:layout_constraintTop_toBottomOf="@+id/button_message" />
-
-    <Button
-        android:id="@+id/button_message"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="259dp"
-        android:layout_marginEnd="37dp"
-        android:layout_marginBottom="34dp"
-        android:text="메시지"
-        app:layout_constraintBottom_toTopOf="@+id/button_youtube"
-        app:layout_constraintEnd_toStartOf="@+id/button_camera"
-        app:layout_constraintStart_toEndOf="@+id/button_videoCall"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_camera"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="259dp"
-        android:layout_marginEnd="33dp"
-        android:layout_marginBottom="34dp"
-        android:text="카메라"
-        app:layout_constraintBottom_toTopOf="@+id/button_gallery"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_message"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button_kakaotalk"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="33dp"
-        android:layout_marginEnd="38dp"
-        android:layout_marginBottom="258dp"
-        android:text="카카오톡"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/button_youtube"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_videoCall" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/component_96" />
 
-    <Button
-        android:id="@+id/button_playstore"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="플레이스토어"
-        tools:layout_editor_absoluteX="33dp"
-        tools:layout_editor_absoluteY="486dp" />
-
-    <Button
-        android:id="@+id/button_helper"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="34dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="258dp"
-        android:text="도우미"
+    <TableLayout
+        android:id="@+id/tableLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        android:stretchColumns="*"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/button_playstore"
-        app:layout_constraintTop_toBottomOf="@+id/button_youtube"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+        <TableRow>
+            <Button
+                android:id="@+id/button_videoCall"
+                android:layout_width="wrap_content"
+                android:layout_height="135dp" />
+
+            <Button
+                android:id="@+id/button_message"
+                android:layout_width="wrap_content"
+                android:layout_height="135dp"
+                android:background="@android:color/transparent"/>
+
+            <Button
+                android:id="@+id/button_camera"
+                android:layout_width="wrap_content"
+                android:layout_height="135dp"
+                android:background="@android:color/transparent"/>
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/button_gallery"
+                android:layout_width="wrap_content"
+                android:layout_height="135dp"
+                android:background="@android:color/transparent"/>
+
+            <Button
+                android:id="@+id/button_youtube"
+                android:layout_width="wrap_content"
+                android:layout_height="135dp" />
+
+            <Button
+                android:id="@+id/button_kakaotalk"
+                android:layout_width="wrap_content"
+                android:layout_height="135dp"
+                android:background="@android:color/transparent"/>
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/button_playstore"
+                android:layout_width="wrap_content"
+                android:layout_height="135dp" />
+
+            <Button
+                android:id="@+id/button_helper"
+                android:layout_width="wrap_content"
+                android:layout_height="135dp"
+                android:background="@android:color/transparent"/>
+        </TableRow>
+    </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
