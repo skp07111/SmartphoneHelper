@@ -29,17 +29,29 @@
         android:theme="@style/Theme.SmartphoneHelper"
         tools:targetApi="31">
         <activity
+            android:name=".YoutubeKakao3Activity"
+            android:exported="false"
+            android:parentActivityName=".YoutubeKakao2Activity"/>
+        <activity
+            android:name=".YoutubeKakao2Activity"
+            android:exported="false"
+            android:parentActivityName=".YoutubeKakao1Activity"/>
+        <activity
+            android:name=".YoutubeKakao1Activity"
+            android:exported="false"
+            android:parentActivityName=".YoutubeShareActivity"/>
+        <activity
             android:name=".PlayStore4Activity"
             android:exported="false"
-            android:parentActivityName=".PlayStore3Activity"/>
+            android:parentActivityName=".PlayStore3Activity" />
         <activity
             android:name=".PlayStore3Activity"
             android:exported="false"
-            android:parentActivityName=".PlayStore2Activity"/>
+            android:parentActivityName=".PlayStore2Activity" />
         <activity
             android:name=".PlayStore2Activity"
             android:exported="false"
-            android:parentActivityName=".PlayStoreActivity"/>
+            android:parentActivityName=".PlayStoreActivity" />
         <activity
             android:name=".PlayStoreActivity"
             android:exported="false"
@@ -47,7 +59,7 @@
         <activity
             android:name=".YoutubeVideoActivity"
             android:exported="false"
-            android:parentActivityName=".YoutubeMainActivity"/>
+            android:parentActivityName=".YoutubeMainActivity" />
         <activity
             android:name=".YoutubeSearchActivity"
             android:exported="false"
@@ -75,7 +87,7 @@
         <activity
             android:name=".Gallery2Activity"
             android:exported="false"
-            android:parentActivityName=".GalleryActivity"/>
+            android:parentActivityName=".GalleryActivity" />
         <activity
             android:name=".GalleryActivity"
             android:exported="false"
@@ -119,7 +131,7 @@
         <activity
             android:name=".CallActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MessageActivity"
             android:exported="false"
@@ -143,44 +155,43 @@
         <activity
             android:name=".KakaoProfile"
             android:exported="false"
-            android:parentActivityName=".KakaoMain"/>
+            android:parentActivityName=".KakaoMain" />
         <activity
             android:name=".KakaoMessage1"
             android:exported="false"
-            android:parentActivityName=".KakaoMain"/>
+            android:parentActivityName=".KakaoMain" />
         <activity
             android:name=".KakaoMessage2"
             android:exported="false"
-            android:parentActivityName=".KakaoMain"/>
+            android:parentActivityName=".KakaoMain" />
         <activity
             android:name=".KakaoMessage3"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".KakaoPhoto1"
             android:exported="false"
-            android:parentActivityName=".KakaoMain"/>
+            android:parentActivityName=".KakaoMain" />
         <activity
             android:name=".KakaoPhoto2"
             android:exported="false"
-            android:parentActivityName=".KakaoPhoto1"/>
+            android:parentActivityName=".KakaoPhoto1" />
         <activity
             android:name=".KakaoPhoto3"
             android:exported="false"
-            android:parentActivityName=".KakaoPhoto2"/>
+            android:parentActivityName=".KakaoPhoto2" />
         <activity
             android:name=".KakaoPhoto4"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MessageWrite"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MessageSend"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
-
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -190,7 +201,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

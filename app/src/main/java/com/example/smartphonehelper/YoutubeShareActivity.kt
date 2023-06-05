@@ -1,5 +1,6 @@
 package com.example.smartphonehelper
 
+import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -79,11 +80,13 @@ class YoutubeShareActivity : AppCompatActivity() {
             // 버튼 2 클릭 시 팝업창 표시
             showPopupMessage("동영상 링크를 카카오톡으로 다른 사람들에게 공유할 수 있는 버튼입니다.")
             tts?.speak(
-                "동영상 링크를 카카오톡으로 다른 사람들에게 공유할 수 있는 버튼입니다.",
+                "동영상 링크를 카카오톡으로 다른 사람들에게 공유할 수 있는 버튼입니다. 김연정 씨에게 동영상 링크를 보내봅시다. 김연정 씨를 선택하세요.",
                 TextToSpeech.QUEUE_FLUSH,
                 null,
                 null
             )
+            var intent = Intent(this, YoutubeKakao1Activity::class.java)
+            startActivity(intent)
         }
 
         youtubeButton3.setOnClickListener {

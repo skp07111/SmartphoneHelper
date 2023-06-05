@@ -11,7 +11,7 @@
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/ic_property_1_default__1_.xml" value="0.264" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/ic_youtube.xml" value="0.336" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/drawable/ic_youtube_1.xml" value="0.319" />
-        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_call.xml" value="0.264" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_call.xml" value="0.1" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_call_makingcall.xml" value="0.24947916666666667" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_call_onthephone.xml" value="0.4" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_camera.xml" value="0.4" />
@@ -28,11 +28,14 @@
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_video_call.xml" value="0.24583333333333332" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_videocall_makingcall.xml" value="0.1" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_writethemessage.xml" value="0.3338541666666667" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_youtube_kakao1.xml" value="0.4" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_youtube_kakao2.xml" value="0.4" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_youtube_kakao3.xml" value="0.4" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_youtube_main.xml" value="0.4" />
-        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_youtube_menu.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_youtube_menu.xml" value="0.1" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_youtube_search.xml" value="0.1" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_youtube_share.xml" value="0.35462962962962963" />
-        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_youtube_video.xml" value="0.26944444444444443" />
+        <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/activity_youtube_video.xml" value="0.22857142857142856" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/content_youtube_search.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/fragment_first.xml" value="0.35462962962962963" />
         <entry key="..\:/Users/green/AndroidStudioProjects/SmartphoneHelper/app/src/main/res/layout/popup_message.xml" value="0.35462962962962963" />
