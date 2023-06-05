@@ -12,7 +12,7 @@ import java.util.Locale
 
 
 class MessageActivity : AppCompatActivity(){  //메세지보내기 기능 메인화면
-    lateinit var msgmenu: ImageButton
+    lateinit var msgmenu: Button
     // tts 권한 설정
     var tts: TextToSpeech? = null
     private val REQUEST_CODE_PERMISSIONS = 1
@@ -43,7 +43,7 @@ class MessageActivity : AppCompatActivity(){  //메세지보내기 기능 메인
             )
         }
 
-        msgmenu = findViewById<ImageButton>(R.id.btn_msgmenu)
+        msgmenu = findViewById<Button>(R.id.btn_msgmenu)
         msgmenu.setOnClickListener{
             val intent= Intent(this, MessageWrite::class.java)
             startActivity(intent)
