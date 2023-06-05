@@ -6,87 +6,34 @@
     android:layout_height="match_parent">
 
     <ImageView
-        android:id="@+id/imageView55"
+        android:id="@+id/imageView73"
         android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="63dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView59"
-        app:layout_constraintEnd_toStartOf="@+id/textView28"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_to_profile"
-        app:srcCompat="@drawable/baseline_account_circle_24" />
-
-    <ImageView
-        android:id="@+id/imageView58"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginEnd="17dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView59"
-        app:layout_constraintEnd_toStartOf="@+id/textView29"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView59"
-        app:srcCompat="@drawable/baseline_account_circle_24" />
-
-    <ImageView
-        android:id="@+id/imageView54"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="83dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="83dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView55"
-        app:layout_constraintEnd_toStartOf="@+id/textView27"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView53"
-        app:srcCompat="@drawable/baseline_account_circle_24" />
-
-    <ImageView
-        android:id="@+id/imageView53"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="65dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="65dp"
-        app:layout_constraintBottom_toBottomOf="@+id/textView27"
-        app:layout_constraintEnd_toStartOf="@+id/textView26"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView25"
-        app:srcCompat="@drawable/baseline_account_circle_24" />
-
-    <Button
-        android:id="@+id/btn_to_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="275dp"
-        android:layout_marginBottom="275dp"
-        android:background="#00ff0000"
-        android:text=" .                                 "
-        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageView44"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/textView22"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="31dp"
+        android:layout_height="0dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="142dp"
-        android:text="친구"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#000000"
-        app:layout_constraintEnd_toStartOf="@+id/imageView72"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kakao_friends" />
+
+    <ImageView
+        android:id="@+id/imageView59"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="624dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView73"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/kakao_photo4" />
+
+    <ImageView
+        android:id="@+id/imageView72"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView73"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_crop_square_24" />
 
     <ImageView
         android:id="@+id/imageView44"
@@ -98,169 +45,16 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/group_7" />
 
-    <TextView
-        android:id="@+id/textView23"
+    <Button
+        android:id="@+id/btn_to_profile"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="123dp"
-        android:layout_marginBottom="7dp"
-        android:text="내 이름"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView60"
-        app:layout_constraintEnd_toStartOf="@+id/imageView47"
-        app:layout_constraintStart_toEndOf="@+id/imageView60" />
-
-    <ImageView
-        android:id="@+id/imageView47"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="91dp"
-        android:layout_marginEnd="27dp"
-        android:layout_marginBottom="91dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView52"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView23"
+        android:layout_marginTop="187dp"
+        android:background="#00ff0000"
+        android:text=" .                                 "
+        android:textAppearance="@style/TextAppearance.AppCompat.Display4"
+        app:layout_constraintStart_toStartOf="@+id/imageView73"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/group_8" />
-
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="294dp"
-        android:text="강대만"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView51"
-        app:layout_constraintTop_toTopOf="@+id/imageView51" />
-
-    <TextView
-        android:id="@+id/textView25"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="297dp"
-        android:layout_marginBottom="9dp"
-        android:text="김호중"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView52"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView52" />
-
-    <TextView
-        android:id="@+id/textView26"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="13dp"
-        android:layout_marginEnd="297dp"
-        android:text="김연정"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView53"
-        app:layout_constraintTop_toTopOf="@+id/imageView53" />
-
-    <TextView
-        android:id="@+id/textView27"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="297dp"
-        android:text="노지연"
-        app:layout_constraintBottom_toBottomOf="@+id/btn_to_profile"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView54"
-        app:layout_constraintTop_toBottomOf="@+id/btn_to_profile" />
-
-    <TextView
-        android:id="@+id/textView28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="7dp"
-        android:layout_marginEnd="297dp"
-        android:text="설운도"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView55"
-        app:layout_constraintTop_toTopOf="@+id/imageView55" />
-
-    <TextView
-        android:id="@+id/textView29"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="297dp"
-        android:layout_marginBottom="11dp"
-        android:text="이예원"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView58"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageView58" />
-
-    <ImageView
-        android:id="@+id/imageView51"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="81dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView52"
-        app:layout_constraintEnd_toStartOf="@+id/textView24"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView23"
-        app:srcCompat="@drawable/baseline_account_circle_24" />
-
-    <ImageView
-        android:id="@+id/imageView60"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginBottom="19dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView32"
-        app:layout_constraintEnd_toStartOf="@+id/textView23"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView22"
-        app:srcCompat="@drawable/baseline_account_circle_24" />
-
-    <ImageView
-        android:id="@+id/imageView52"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="7dp"
-        android:layout_marginTop="251dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginBottom="251dp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView55"
-        app:layout_constraintEnd_toStartOf="@+id/textView25"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textView22"
-        app:srcCompat="@drawable/baseline_account_circle_24" />
-
-    <TextView
-        android:id="@+id/textView32"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="158dp"
-        android:text="친구 12"
-        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView59"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="164dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView27"
-        app:srcCompat="@drawable/kakao_photo4" />
-
-    <ImageView
-        android:id="@+id/imageView72"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginEnd="102dp"
-        android:layout_marginBottom="9dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView47"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView22"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baseline_crop_square_24" />
+        tools:ignore="MissingConstraints" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
