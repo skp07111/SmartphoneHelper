@@ -151,12 +151,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="15dp"
-        app:layout_constraintBottom_toBottomOf="@+id/button"
-        app:layout_constraintEnd_toEndOf="@+id/button"
+        app:layout_constraintBottom_toBottomOf="@+id/albumbutton"
+        app:layout_constraintEnd_toEndOf="@+id/albumbutton"
         app:srcCompat="@drawable/baseline_touch_app_24" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/albumbutton"
         android:layout_width="90dp"
         android:layout_height="90dp"
         android:background="#00ff0000"

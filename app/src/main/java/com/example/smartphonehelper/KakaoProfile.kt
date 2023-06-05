@@ -28,7 +28,19 @@ class KakaoProfile: AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kakaoprofile)
-
+        tts = TextToSpeech(applicationContext) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                val result = tts?.setLanguage(Locale.KOREAN)
+                if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                    Log.e("TTS", "Korean language is not supported.")
+                }
+            } else {
+                Log.e("TTS", "Initialization failed.")
+            }
+            tts?.speak(
+                "하단의 말풍선 그림을 눌러보세요.", TextToSpeech.QUEUE_FLUSH, null, null
+            )
+        }
         //프로필을 터치하면 프로필화면으로 화면전환
         chat = findViewById<ImageButton>(R.id.btn_chat)
         chat.setOnClickListener {

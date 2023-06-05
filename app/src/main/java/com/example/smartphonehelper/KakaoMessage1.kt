@@ -28,6 +28,20 @@ class KakaoMessage1 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kakao_sendmessage1)
 
+        //tts 초기화 설정
+        tts = TextToSpeech(applicationContext) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                val result = tts?.setLanguage(Locale.KOREAN)
+                if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                    Log.e("TTS", "Korean language is not supported.")
+                }
+            } else {
+                Log.e("TTS", "Initialization failed.")
+            }
+            tts?.speak(
+                "자판을 호출하려면 손가락 그림을 눌러보세요.", TextToSpeech.QUEUE_FLUSH, null, null)
+        }
+
         //하단의 +버튼을 누르면 키패드 생성
         actbutton = findViewById<Button>(R.id.act_btn)
         actbutton.setOnClickListener {

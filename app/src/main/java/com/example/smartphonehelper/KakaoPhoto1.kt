@@ -27,13 +27,6 @@ class KakaoPhoto1: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kakao_sendphoto)
 
-        actbutton3 = findViewById<Button>(R.id.act_btn3)
-        actbutton3.setOnClickListener {
-            val intent = Intent(this, KakaoMessage2::class.java)
-            startActivity(intent)
-        }
-
-        ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS)
         //tts 초기화 설정
         tts = TextToSpeech(applicationContext) { status ->
             if (status == TextToSpeech.SUCCESS) {
@@ -44,9 +37,17 @@ class KakaoPhoto1: AppCompatActivity() {
             } else {
                 Log.e("TTS", "Initialization failed.")
             }
-            //tts 말하기
-            tts?.speak("안녕하세요.", TextToSpeech.QUEUE_FLUSH, null, null)
+            tts?.speak(
+                "사진과 동영상을 보내려면 하단의 십자 그림을 눌러보세요.", TextToSpeech.QUEUE_FLUSH, null, null)
         }
+
+        actbutton3 = findViewById<Button>(R.id.act_btn3)
+        actbutton3.setOnClickListener {
+            val intent = Intent(this, KakaoPhoto2::class.java)
+            startActivity(intent)
+        }
+
+
     }
 
 }

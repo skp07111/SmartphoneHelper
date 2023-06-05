@@ -29,14 +29,6 @@ class KakaoMessage2 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kakao_sendmessage2)
 
-        //전송버튼 누르면 화면전환
-        actbutton2 = findViewById<ImageButton>(R.id.act_btn2)
-        actbutton2.setOnClickListener {
-            val intent = Intent(this, KakaoMessage3::class.java)
-            startActivity(intent)
-        }
-
-        ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS)
         //tts 초기화 설정
         tts = TextToSpeech(applicationContext) { status ->
             if (status == TextToSpeech.SUCCESS) {
@@ -47,8 +39,16 @@ class KakaoMessage2 : AppCompatActivity() {
             } else {
                 Log.e("TTS", "Initialization failed.")
             }
-            //tts 말하기
-            tts?.speak("안녕하세요.", TextToSpeech.QUEUE_FLUSH, null, null)
+            tts?.speak(
+                "하고싶은 말은 적은 후 종이비행기 그림을 누르면 메세지가 전송됩니다.", TextToSpeech.QUEUE_FLUSH, null, null)
         }
+
+        //전송버튼 누르면 화면전환
+        actbutton2 = findViewById<ImageButton>(R.id.act_btn2)
+        actbutton2.setOnClickListener {
+            val intent = Intent(this, KakaoMessage3::class.java)
+            startActivity(intent)
+        }
+
     }
 }

@@ -7,10 +7,10 @@ import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.app.ActivityCompat
 import java.util.Locale
 
 class KakaoMessage3 : AppCompatActivity() {
+    lateinit var next:Button
     // tts 권한 설정
     var tts: TextToSpeech? = null
     private val REQUEST_CODE_PERMISSIONS = 1
@@ -26,7 +26,6 @@ class KakaoMessage3 : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kakao_sendmessage3)
 
-        ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS)
         //tts 초기화 설정
         tts = TextToSpeech(applicationContext) { status ->
             if (status == TextToSpeech.SUCCESS) {
@@ -37,8 +36,16 @@ class KakaoMessage3 : AppCompatActivity() {
             } else {
                 Log.e("TTS", "Initialization failed.")
             }
-            //tts 말하기
-            tts?.speak("안녕하세요.", TextToSpeech.QUEUE_FLUSH, null, null)
+            tts?.speak(
+                "메세지가 성공적으로 전송되었습니다." +
+                        "이제 김연정씨에게 사진을 보내볼까요?" +
+                        "다음 버튼을 눌러주세요", TextToSpeech.QUEUE_FLUSH, null, null)
+        }
+
+        next = findViewById<Button>(R.id.next)
+        next.setOnClickListener {
+            val intent = Intent(this, KakaoPhoto1::class.java)
+            startActivity(intent)
         }
     }
 }
