@@ -3,6 +3,8 @@ package com.example.smartphonehelper
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
+import android.util.Log
 import android.util.TypedValue
 import android.view.View
 import android.widget.Button
@@ -11,6 +13,7 @@ import android.widget.RelativeLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.ColorUtils
+import java.util.*
 
 class YoutubeShareActivity : AppCompatActivity() {
     lateinit var youtubeButton1 : Button
@@ -28,11 +31,23 @@ class YoutubeShareActivity : AppCompatActivity() {
     private var clickedButton: Button? = null
 
     private lateinit var popupContainer: RelativeLayout
+    var tts: TextToSpeech? = null
     
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_youtube_share)
+
+        tts = TextToSpeech(applicationContext) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                val result = tts?.setLanguage(Locale.KOREAN)
+                if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                    Log.e("TTS", "Korean language is not supported.")
+                }
+            } else {
+                Log.e("TTS", "Initialization failed.")
+            }
+        }
 
         youtubeButton1 = findViewById<Button>(R.id.youtube_button1)
         youtubeButton2 = findViewById<Button>(R.id.youtube_button2)
@@ -51,71 +66,143 @@ class YoutubeShareActivity : AppCompatActivity() {
             updateButtonStates(youtubeButton1)
             // 버튼 1 클릭 시 팝업창 표시
             showPopupMessage("유튜브 동영상의 링크를 복사하는 버튼입니다. 링크를 복사하여 원하는 영상을 다른 사람들에게 공유해보세요!")
+            tts?.speak(
+                "유튜브 동영상의 링크를 복사하는 버튼입니다. 링크를 복사하여 원하는 영상을 다른 사람들에게 공유해보세요!",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
         }
 
         youtubeButton2.setOnClickListener {
             updateButtonStates(youtubeButton2)
             // 버튼 2 클릭 시 팝업창 표시
             showPopupMessage("동영상 링크를 카카오톡으로 다른 사람들에게 공유할 수 있는 버튼입니다.")
+            tts?.speak(
+                "동영상 링크를 카카오톡으로 다른 사람들에게 공유할 수 있는 버튼입니다.",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
         }
 
         youtubeButton3.setOnClickListener {
             updateButtonStates(youtubeButton3)
             // 버튼 3 클릭 시 팝업창 표시
             showPopupMessage("동영상 링크를 카카오톡 '나와의 채팅방'에 공유할 수 있는 버튼입니다.")
+            tts?.speak(
+                "동영상 링크를 카카오톡 나와의 채팅방에 공유할 수 있는 버튼입니다.",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
         }
 
         youtubeButton4.setOnClickListener {
             updateButtonStates(youtubeButton4)
             // 버튼 4 클릭 시 팝업창 표시
             showPopupMessage("동영상 링크를 Gmail로 다른 사람들에게 공유할 수 있는 버튼입니다.")
+            tts?.speak(
+                "동영상 링크를 Gmail로 다른 사람들에게 공유할 수 있는 버튼입니다.",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
         }
 
         youtubeButton5.setOnClickListener {
             updateButtonStates(youtubeButton5)
             // 버튼 5 클릭 시 팝업창 표시
             showPopupMessage("동영상 링크를 블루투스로 다른 사람들에게 공유할 수 있는 버튼입니다.")
+            tts?.speak(
+                "동영상 링크를 블루투스로 다른 사람들에게 공유할 수 있는 버튼입니다.",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
         }
 
         youtubeButton6.setOnClickListener {
             updateButtonStates(youtubeButton6)
             // 버튼 6 클릭 시 팝업창 표시
             showPopupMessage("동영상 링크를 Nearby Share로 다른 사람들에게 공유할 수 있는 버튼입니다.")
+            tts?.speak(
+                "동영상 링크를 Nearby Share로 다른 사람들에게 공유할 수 있는 버튼입니다.",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
         }
 
         youtubeButton7.setOnClickListener {
             updateButtonStates(youtubeButton7)
             // 버튼 7 클릭 시 팝업창 표시
             showPopupMessage("동영상 링크를 인스타그램 다이렉트 메시지(DM)로 다른 사람들에게 공유할 수 있는 버튼입니다.")
+            tts?.speak(
+                "동영상 링크를 인스타그램 다이렉트 메시지(DM)로 다른 사람들에게 공유할 수 있는 버튼입니다.",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
         }
 
         youtubeButton8.setOnClickListener {
             updateButtonStates(youtubeButton8)
             // 버튼 8 클릭 시 팝업창 표시
             showPopupMessage("동영상 링크를 메시지로 다른 사람들에게 공유할 수 있는 버튼입니다.")
+            tts?.speak(
+                "동영상 링크를 메시지로 다른 사람들에게 공유할 수 있는 버튼입니다.",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
         }
         youtubeButton9.setOnClickListener {
             updateButtonStates(youtubeButton9)
             // 버튼 9 클릭 시 팝업창 표시
             showPopupMessage("동영상 링크를 삼성노트의 새 노트에 추가할 수 있는 버튼입니다.")
+            tts?.speak(
+                "동영상 링크를 삼성노트의 새 노트에 추가할 수 있는 버튼입니다.",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
         }
 
         youtubeButton10.setOnClickListener {
             updateButtonStates(youtubeButton10)
             // 버튼 10 클릭 시 팝업창 표시
             showPopupMessage("동영상 링크를 삼성노트의 기존 노트에 추가할 수 있는 버튼입니다.")
+            tts?.speak(
+                "동영상 링크를 삼성노트의 기존 노트에 추가할 수 있는 버튼입니다.",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
         }
 
         youtubeButton11.setOnClickListener {
             updateButtonStates(youtubeButton11)
             // 버튼 11 클릭 시 팝업창 표시
             showPopupMessage("동영상 링크를 이메일로 다른 사람들에게 공유할 수 있는 버튼입니다.")
+            tts?.speak(
+                "동영상 링크를 이메일로 다른 사람들에게 공유할 수 있는 버튼입니다.",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
         }
 
         youtubeButton12.setOnClickListener {
             updateButtonStates(youtubeButton12)
             // 버튼 12 클릭 시 팝업창 표시
             showPopupMessage("동영상 링크를 Wi-Fi 다이렉트로 다른 사람들에게 공유할 수 있는 버튼입니다.")
+            tts?.speak(
+                "동영상 링크를 Wi-Fi 다이렉트로 다른 사람들에게 공유할 수 있는 버튼입니다.",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
         }
 
         showPopupMessage2("빨간색 테두리의 버튼들을 하나씩 눌러보세요!")

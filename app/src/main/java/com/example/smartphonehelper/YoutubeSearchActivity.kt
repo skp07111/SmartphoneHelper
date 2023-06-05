@@ -4,11 +4,14 @@ import android.content.Intent
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
+import android.util.Log
 import android.util.TypedValue
 import android.view.View
 import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.ColorUtils
+import java.util.*
 
 class YoutubeSearchActivity : AppCompatActivity() {
 
@@ -18,10 +21,22 @@ class YoutubeSearchActivity : AppCompatActivity() {
     private var clickedButton: ImageButton? = null
 
     private lateinit var popupContainer: RelativeLayout
+    var tts: TextToSpeech? = null
     
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_youtube_search)
+
+        tts = TextToSpeech(applicationContext) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                val result = tts?.setLanguage(Locale.KOREAN)
+                if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                    Log.e("TTS", "Korean language is not supported.")
+                }
+            } else {
+                Log.e("TTS", "Initialization failed.")
+            }
+        }
 
         back = findViewById<ImageButton>(R.id.icon_back)
         searchWindow = findViewById<ImageButton>(R.id.icon_searchWindow)
@@ -36,12 +51,24 @@ class YoutubeSearchActivity : AppCompatActivity() {
             updateButtonStates(searchWindow)
             // 검색창 클릭 시 팝업창 표시
             showPopupMessage("이 창에 검색어를 입력하여 보고싶은 동영상을 찾을 수 있습니다.")
+            tts?.speak(
+                "이 창에 검색어를 입력하여 보고싶은 동영상을 찾을 수 있습니다.",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
         }
 
         voice.setOnClickListener {
             updateButtonStates(voice)
             // 음성 검색 클릭 시 팝업창 표시
             showPopupMessage("이 버튼을 누르면 음성 인식으로 보고싶은 동영상을 검색할 수 있습니다.")
+            tts?.speak(
+                "이 버튼을 누르면 음성 인식으로 보고싶은 동영상을 검색할 수 있습니다.",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
         }
 
         showPopupMessage2("빨간색 테두리의 버튼들을 하나씩 눌러보세요!")

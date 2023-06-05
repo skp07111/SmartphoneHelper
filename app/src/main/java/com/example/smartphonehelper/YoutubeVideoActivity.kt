@@ -3,21 +3,36 @@ package com.example.smartphonehelper
 import android.graphics.drawable.ColorDrawable
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.speech.tts.TextToSpeech
+import android.util.Log
 import android.util.TypedValue
 import android.view.View
 import android.widget.*
 import androidx.core.content.ContextCompat
 import androidx.core.graphics.ColorUtils
+import java.util.*
 
 class YoutubeVideoActivity : AppCompatActivity() {
     lateinit var subscribeButton : ImageButton
     private var clickedButton: ImageButton? = null
 
     private lateinit var popupContainer: RelativeLayout
+    var tts: TextToSpeech? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_youtube_video)
+
+        tts = TextToSpeech(applicationContext) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                val result = tts?.setLanguage(Locale.KOREAN)
+                if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                    Log.e("TTS", "Korean language is not supported.")
+                }
+            } else {
+                Log.e("TTS", "Initialization failed.")
+            }
+        }
 
         subscribeButton = findViewById<ImageButton>(R.id.icon_subscribe)
 
@@ -25,6 +40,12 @@ class YoutubeVideoActivity : AppCompatActivity() {
             updateButtonStates(subscribeButton)
             // 구독 버튼 클릭 시 팝업창 표시
             showPopupMessage("이 버튼을 누르면 해당 채널을 구독할 수 있습니다.")
+            tts?.speak(
+                "이 버튼을 누르면 해당 채널을 구독할 수 있습니다.",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
         }
 
         showPopupMessage2("빨간색 테두리의 버튼을 눌러보세요!")
