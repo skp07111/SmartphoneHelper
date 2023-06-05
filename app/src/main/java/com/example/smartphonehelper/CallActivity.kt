@@ -53,11 +53,11 @@ class CallActivity : AppCompatActivity() {
             recentCall = findViewById<Button>(R.id.btn_recent_call)
             phoneBook = findViewById<Button>(R.id.btn_phone_book)
             tts?.speak(
-                "각 버튼을 눌러주시면, 어떤 기능인지 설명해드리겠습니다", TextToSpeech.QUEUE_FLUSH, null, null)
-            tts?.speak(
-                "상대방에게 전화를 걸고 싶으시면 녹색 전화기 모양 버튼을 눌러주시고, 영상통화를 걸고 싶으시면 첫번째 버튼을 눌러주세요.", TextToSpeech.QUEUE_FLUSH, null, null)
+                "각 네모 테두리를 눌러주시면, 어떤 기능인지 설명해드리겠습니다", TextToSpeech.QUEUE_FLUSH, null, null)
             // 통화 버튼 눌렀을 때 통화거는중 화면 (C_MakingCallActiviy)으로 전환
             call.setOnClickListener {
+                tts?.speak(
+                    "전화번호를 입력하고 이 버튼을 누르면 전화가 걸립니다. 상대방이 전화를 받을 때까지 기다리면 됩니다. 전화를 끊고 싶으면 빨간색 수화기 버튼을 눌러주세요", TextToSpeech.QUEUE_FLUSH, null, null)
                 val intent = Intent(this, C_MakingCallActivity::class.java)
                 startActivity(intent)
             }
@@ -65,6 +65,10 @@ class CallActivity : AppCompatActivity() {
             videoCall.setOnClickListener {
                 val intent = Intent(this, VC_MakingCallActivity::class.java)
                 startActivity(intent)
+                tts?.speak(
+                    "전화번호를 입력하고 이 버튼을 누르면 영상 전화가 걸립니다. 전화를 끊고 싶으면 빨간색 수화기 버튼을 눌러주세요", TextToSpeech.QUEUE_FLUSH, null, null)
+
+
             }
             search.setOnClickListener{
                 tts?.speak("이 버튼을 누르면 연락처를 검색할 수 있습니다.", TextToSpeech.QUEUE_FLUSH, null, null)
