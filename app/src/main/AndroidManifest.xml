@@ -61,6 +61,18 @@
             android:exported="false"
             android:parentActivityName=".Gallery3Activity" />
         <activity
+            android:name=".YoutubeKakao1Activity"
+            android:exported="false"
+            android:parentActivityName=".YoutubeShareActivity" />
+        <activity
+            android:name=".YoutubeKakao2Activity"
+            android:exported="false"
+            android:parentActivityName=".YoutubeKakao1Activity" />
+        <activity
+            android:name=".YoutubeKakao3Activity"
+            android:exported="false"
+            android:parentActivityName=".YoutubeKakao2Activity" />
+        <activity
             android:name=".YoutubeMenuActivity"
             android:exported="false"
             android:parentActivityName=".YoutubeMainActivity" />
