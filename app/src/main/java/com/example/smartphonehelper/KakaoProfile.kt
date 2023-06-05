@@ -6,12 +6,13 @@ import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import java.util.Locale
 
 class KakaoProfile: AppCompatActivity() {
-    lateinit var chat: Button
+    lateinit var chat: ImageButton
 
     // tts 권한 설정
     var tts: TextToSpeech? = null
@@ -29,7 +30,7 @@ class KakaoProfile: AppCompatActivity() {
         setContentView(R.layout.activity_kakaoprofile)
 
         //프로필을 터치하면 프로필화면으로 화면전환
-        chat = findViewById<Button>(R.id.btn_chat)
+        chat = findViewById<ImageButton>(R.id.btn_chat)
         chat.setOnClickListener {
             val intent = Intent(this, KakaoMessage1::class.java)
             startActivity(intent)

@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.util.Log
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import java.util.Locale
@@ -22,14 +23,14 @@ class KakaoMessage2 : AppCompatActivity() {
         Manifest.permission.MODIFY_AUDIO_SETTINGS
     )
 
-    lateinit var actbutton2: Button
+    lateinit var actbutton2: ImageButton
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kakao_sendmessage2)
 
         //전송버튼 누르면 화면전환
-        actbutton2 = findViewById<Button>(R.id.act_btn2)
+        actbutton2 = findViewById<ImageButton>(R.id.act_btn2)
         actbutton2.setOnClickListener {
             val intent = Intent(this, KakaoMessage3::class.java)
             startActivity(intent)

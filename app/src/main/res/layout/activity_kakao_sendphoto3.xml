@@ -115,7 +115,7 @@
         android:id="@+id/imageView45"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         app:layout_constraintStart_toStartOf="@+id/imageView71"
         app:layout_constraintTop_toBottomOf="@+id/imageView70"
         app:srcCompat="@drawable/kakao_photo2" />
@@ -127,10 +127,11 @@
         android:layout_marginTop="291dp"
         android:layout_marginBottom="293dp"
         android:background="#00ff0000"
-        tools:ignore="SpeakableTextPresentCheck"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageView45"
         app:layout_constraintTop_toTopOf="@+id/textView37"
-        app:srcCompat="@drawable/baseline_touch_app_25" />
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/baseline_touch_app_25"
+        tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

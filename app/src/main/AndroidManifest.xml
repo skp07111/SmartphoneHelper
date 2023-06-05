@@ -138,34 +138,44 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".KakaoProfile"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".KakaoMain"/>
         <activity
             android:name=".KakaoMessage1"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".KakaoMain"/>
         <activity
             android:name=".KakaoMessage2"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".KakaoMain"/>
         <activity
             android:name=".KakaoMessage3"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".KakaoPhoto1"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".KakaoMain"/>
         <activity
             android:name=".KakaoPhoto2"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".KakaoPhoto1"/>
         <activity
             android:name=".KakaoPhoto3"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".KakaoPhoto2"/>
         <activity
             android:name=".KakaoPhoto4"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MessageWrite"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MessageSend"
-            android:exported="false" />
+            android:exported="false"
+            android:parentActivityName=".MainActivity"/>
 
         <activity
             android:name=".MainActivity"

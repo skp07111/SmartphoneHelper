@@ -11,7 +11,7 @@
         android:id="@+id/imageView13"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="221dp"
+        android:layout_marginBottom="220dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/component_34" />
@@ -32,9 +32,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="11dp"
-        android:layout_marginBottom="7dp"
         android:text="+"
-        app:layout_constraintBottom_toTopOf="@+id/imageView13"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textView5"
         app:layout_constraintStart_toEndOf="@+id/textView5" />
 
     <TextView
@@ -42,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginBottom="7dp"
+        android:layout_marginBottom="6dp"
         android:text="프로모션"
         app:layout_constraintBottom_toTopOf="@+id/imageView13"
         app:layout_constraintStart_toEndOf="@+id/textView6" />
@@ -78,14 +77,13 @@
         app:layout_constraintEnd_toStartOf="@+id/textView11"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textView11"
-        app:layout_constraintVertical_bias="0.569"
         app:srcCompat="@drawable/baseline_account_circle_24" />
 
     <TextView
         android:id="@+id/textView12"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="7dp"
         android:layout_marginEnd="16dp"
         android:text="5월 10일"
         android:textAppearance="@style/TextAppearance.AppCompat.Small"
@@ -97,8 +95,8 @@
         android:id="@+id/textView11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="146dp"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="145dp"
         android:text="좋은하루 되세요~"
         app:layout_constraintEnd_toStartOf="@+id/textView12"
         app:layout_constraintStart_toEndOf="@+id/imageView46"
@@ -141,7 +139,7 @@
         android:id="@+id/btn_msgmenu"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_marginEnd="29dp"
+        android:layout_marginEnd="28dp"
         android:layout_marginBottom="38dp"
         android:text="+"
         app:layout_constraintBottom_toBottomOf="parent"
