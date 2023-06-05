@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/recentcall_view"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     tools:context=".C_RecentCallActivity">
 
     <ImageView
@@ -24,6 +24,7 @@
         android:layout_height="wrap_content"
         android:background="#80000000"
         android:orientation="vertical"
+        android:layout_marginBottom="650dp"
         android:padding="16dp"
         android:visibility="gone"
         app:layout_constraintBottom_toTopOf="parent"

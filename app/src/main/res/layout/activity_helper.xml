@@ -25,7 +25,7 @@
         android:layout_marginEnd="288dp"
         android:layout_marginBottom="24dp"
         android:backgroundTint="#00FBFBFB"
-        android:outlineProvider="paddedBounds"
+        android:outlineProvider="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -37,7 +37,7 @@
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="24dp"
         android:backgroundTint="#00FBFBFB"
-        android:outlineProvider="paddedBounds"
+        android:outlineProvider="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -49,7 +49,7 @@
         android:layout_marginEnd="172dp"
         android:layout_marginBottom="16dp"
         android:backgroundTint="#00FBFBFB"
-        android:outlineProvider="paddedBounds"
+        android:outlineProvider="none"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
