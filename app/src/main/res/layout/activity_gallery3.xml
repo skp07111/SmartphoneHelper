@@ -38,7 +38,7 @@
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
             android:textSize="25sp"
-            android:text="사진을 공유하고 싶으시면\n하단 중앙에 있는\n[사진공유] 버튼을 눌러보세요."
+            android:text="사진을 공유하고 싶다면\n하단 중앙에 있는\n[사진공유] 버튼을 눌러보세요."
             android:gravity="center"
             android:padding="1dp" />
 

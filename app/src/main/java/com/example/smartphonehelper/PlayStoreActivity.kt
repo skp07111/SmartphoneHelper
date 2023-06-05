@@ -13,7 +13,7 @@ class PlayStoreActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_play_store)
 
-        showPopupMessage("검색창에서 설치하고 싶은 앱을 검색할 수 있어요.\n빨간색 테두리 부분을 눌러보세요!")
+        showPopupMessage("검색창에서 설치하고 싶은 앱을 검색할 수 있어요.\n빨간색 테두리 부분을 눌러보세요.")
     }
 
     private fun showPopupMessage(message: String) {

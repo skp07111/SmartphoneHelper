@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
             android:textSize="25sp"
-            android:text="검색창에서 설치하고 싶은 앱을 검색할 수 있어요.\n빨간색 테두리 부분을 눌러보세요!"
+            android:text="검색창에서 설치하고 싶은 앱을 검색할 수 있어요.\n빨간색 테두리 부분을 눌러보세요."
             android:gravity="center"
             android:padding="1dp" />
 

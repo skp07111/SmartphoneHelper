@@ -15,7 +15,7 @@ class Gallery3Activity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_gallery3)
 
-        showPopupMessage("사진을 공유하고 싶으시면\n하단 중앙에 있는\n[사진공유] 버튼을 눌러보세요.")
+        showPopupMessage("사진을 공유하고 싶다면\n하단 중앙에 있는\n[사진공유] 버튼을 눌러보세요.")
 
         val galleryAlbumPicShare = findViewById<ImageButton>(R.id.galleryAlbumPicShare)
         galleryAlbumPicShare.setOnClickListener {
