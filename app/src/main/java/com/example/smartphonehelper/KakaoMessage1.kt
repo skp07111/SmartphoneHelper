@@ -34,20 +34,5 @@ class KakaoMessage1 : AppCompatActivity() {
             val intent = Intent(this, KakaoMessage2::class.java)
             startActivity(intent)
         }
-
-        ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS)
-        //tts 초기화 설정
-        tts = TextToSpeech(applicationContext) { status ->
-            if (status == TextToSpeech.SUCCESS) {
-                val result = tts?.setLanguage(Locale.KOREAN)
-                if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
-                    Log.e("TTS", "Korean language is not supported.")
-                }
-            } else {
-                Log.e("TTS", "Initialization failed.")
-            }
-            //tts 말하기
-            tts?.speak("안녕하세요.", TextToSpeech.QUEUE_FLUSH, null, null)
-        }
     }
 }

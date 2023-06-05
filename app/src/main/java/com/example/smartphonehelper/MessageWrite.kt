@@ -17,6 +17,5 @@ class MessageWrite : AppCompatActivity(){
             val intent= Intent(this, MessageSend::class.java)
             startActivity(intent)
         }
-
     }
 }
