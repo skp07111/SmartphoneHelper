@@ -4,4 +4,5 @@
     <dimen name="popup_message_padding_horizontal">16dp</dimen>
     <dimen name="popup_message_top_margin">20dp</dimen>
     <dimen name="popup_message_line_spacing">8dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>

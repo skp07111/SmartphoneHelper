@@ -7,7 +7,7 @@
     tools:context=".YoutubeMenuActivity">
 
     <ImageView
-        android:id="@+id/youtube_menubar"
+        android:id="@+id/youtube_menu"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -16,10 +16,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/component_81" />
+        app:srcCompat="@drawable/youtube_menu" />
 
     <Button
-        android:id="@+id/youtube_share"
+        android:id="@+id/youtube_shareButton"
         android:layout_width="0dp"
         android:layout_height="55dp"
         android:layout_marginBottom="4dp"
@@ -27,7 +27,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/youtube_menubar"
+        app:layout_constraintTop_toTopOf="@+id/youtube_menu"
         app:layout_constraintVertical_bias="0.791"
         android:background="@android:color/transparent"/>
 

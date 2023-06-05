@@ -13,7 +13,7 @@ class YoutubeMenuActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_youtube_menu)
 
-        shareButton = findViewById<Button>(R.id.youtube_share)
+        shareButton = findViewById<Button>(R.id.youtube_shareButton)
 
         shareButton.setOnClickListener() {
             var intent = Intent(this, YoutubeShareActivity::class.java)

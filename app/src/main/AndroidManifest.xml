@@ -31,6 +31,14 @@
             android:name=".PlayStoreActivity"
             android:exported="false" />
         <activity
+            android:name=".YoutubeVideoActivity"
+            android:exported="false"
+            android:parentActivityName=".YoutubeMainActivity"/>
+        <activity
+            android:name=".YoutubeSearchActivity"
+            android:exported="false"
+            android:parentActivityName=".YoutubeMainActivity" />
+        <activity
             android:name=".YoutubeShareActivity"
             android:exported="false"
             android:parentActivityName=".YoutubeMenuActivity" />
