@@ -5,7 +5,10 @@ import android.content.Intent
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.util.Log
+import android.view.View
 import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import java.util.*
 
@@ -21,7 +24,7 @@ class C_PhoneBook_SearchActivity : AppCompatActivity(){
         Manifest.permission.MODIFY_AUDIO_SETTINGS
     )
     lateinit var voice_search: Button
-
+    private lateinit var popupContainer: LinearLayout
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_phonebook_search)
@@ -35,20 +38,29 @@ class C_PhoneBook_SearchActivity : AppCompatActivity(){
             } else {
                 Log.e("TTS", "Initialization failed.")
             }
-            voice_search = findViewById<Button>(R.id.btn_voice_search)
-
+            }// 초기화 끝
+        voice_search = findViewById<Button>(R.id.btn_voice_search)
+        tts?.speak(
+            "키보드 자판을 쳐서 전화하길 원하는 사람의 이름을 검색할 수 있습니다. 빨간 테두리의 버튼을 눌러주세요. ", TextToSpeech.QUEUE_FLUSH, null, null)
+        showPopupMessage("키보드 자판을 쳐서 전화하길 원하는 사람의 이름을 검색할 수 있습니다. 빨간 테두리의 버튼을 눌러주세요.")
+        //
+        voice_search.setOnClickListener {
             tts?.speak(
-                "키보드 자판을 쳐서 전화하길 원하는 사람의 이름을 검색할 수 있습니다. 네모 모양의 버튼을 눌러주세요. ", TextToSpeech.QUEUE_FLUSH, null, null)
+                "이 음성 검색 버튼을 누르고 전화하길 원하는 사람의 이름을 말하면 자동으로 검색됩니다 ", TextToSpeech.QUEUE_FLUSH, null, null
+            )
+            val intent = Intent(this, C_PhoneBook_Search2Activity::class.java)
+            startActivity(intent)
+        }
+    }
+    private fun showPopupMessage(message: String) {
+        popupContainer = findViewById(R.id.popupContainer)
+        val messageTextView = findViewById<TextView>(R.id.messageTextView)
 
-            //
-            voice_search.setOnClickListener {
-                tts?.speak(
-                    "이 음성 검색 버튼을 누르고 전화하길 원하는 사람의 이름을 말하면 자동으로 검색됩니다 ", TextToSpeech.QUEUE_FLUSH, null, null
-                )
-                val intent = Intent(this, C_PhoneBook_Search2Activity::class.java)
-                startActivity(intent)
-            }
+        messageTextView.text = message
+        popupContainer.visibility = View.VISIBLE
+    }
 
-            }
+    private fun closePopupMessage() {
+        popupContainer.visibility = View.GONE
     }
 }

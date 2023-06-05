@@ -51,9 +51,9 @@ class Helper : AppCompatActivity() {
         b_back = findViewById<Button>(R.id.btn_pre_back)
         b_list = findViewById<Button>(R.id.btn_list)
         tts?.speak(
-            "네모 테두리의 버튼들을 눌러주시면 기능을 설명해 드립니다 ", TextToSpeech.QUEUE_FLUSH, null, null
+            "빨간 테두리의 버튼들을 눌러주시면 기능을 설명해 드립니다 ", TextToSpeech.QUEUE_FLUSH, null, null
         )
-        showPopupMessage("네모 테두리 버튼을 눌러주시면, 기능에 대해 설명해드립니다")
+        showPopupMessage("빨간 테두리 버튼을 눌러주시면, 기능에 대해 설명해드립니다")
         //
         b_helper.setOnClickListener {
             tts?.speak(
@@ -62,7 +62,7 @@ class Helper : AppCompatActivity() {
                 null,
                 null
             )
-            showPopupMessage("이 버튼은 홈 버튼입니다. 이 버튼을 가볍게 누르면 맨처음 화면으로 돌아갑니다. 만약 이 버튼을 꾹 누르면 보시는 것 같이 도우미 화면이 뜹니다.")
+            showPopupMessage("이 버튼은 홈 버튼입니다. \n 이 버튼을 가볍게 누르면 맨처음 화면으로 돌아갑니다. \n만약 이 버튼을 꾹 누르면 보시는 것 같이 도우미 화면이 뜹니다.")
             Handler(Looper.getMainLooper()).postDelayed({
                 startActivity(Intent(this, Helper2::class.java))
             }, 6000)
