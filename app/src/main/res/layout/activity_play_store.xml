@@ -7,21 +7,6 @@
     android:background="#FFFFFF"
     tools:context=".PlayStoreActivity">
 
-    <ImageView
-        android:id="@+id/playStroeSearchBar"
-        android:layout_width="313dp"
-        android:layout_height="553dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginStart="47dp"
-        android:layout_marginTop="178dp"
-        android:layout_marginEnd="51dp"
-        android:layout_marginBottom="-1dp"
-        app:srcCompat="@drawable/playstoreimg1" />
-
     <RelativeLayout
         android:id="@+id/popupContainer"
         android:layout_width="match_parent"
@@ -37,7 +22,7 @@
             android:layout_height="wrap_content"
             android:textColor="#FFFFFF"
             android:textSize="25sp"
-            android:text="검색창을 눌러서 설치하고 싶은 앱을 검색할 수 있어요.\n‘앱 및 게임 검색’으로 표시되어 있는 부분이 검색창입니다."
+            android:text="검색창에서 설치하고 싶은 앱을 검색할 수 있어요.\n빨간색 테두리 부분을 눌러보세요!"
             android:gravity="center"
             android:padding="1dp" />
 
@@ -54,14 +39,22 @@
         app:srcCompat="@drawable/ic_playstoresearchbar" />
 
     <ImageView
+        android:id="@+id/playStroeSearchImg"
+        android:layout_width="313dp"
+        android:layout_height="553dp"
+        android:layout_below="@id/imageView45"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        app:srcCompat="@drawable/playstoreimg1" />
+
+    <ImageView
         android:id="@+id/imageView47"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="130dp"
-        android:layout_marginEnd="64dp"
+        android:layout_alignTop="@id/imageView45"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="18dp"
+        android:layout_toEndOf="@id/imageView45"
         app:srcCompat="@drawable/ic_playstoresearchbar2" />
-
 
 </RelativeLayout>
