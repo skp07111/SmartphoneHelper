@@ -1,14 +1,18 @@
 package com.example.smartphonehelper
 
 import android.Manifest
+import android.content.Intent
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
 import android.util.Log
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import java.util.Locale
 
 class KakaoProfile: AppCompatActivity() {
+    lateinit var chat: Button
+
     // tts 권한 설정
     var tts: TextToSpeech? = null
     private val REQUEST_CODE_PERMISSIONS = 1
@@ -24,19 +28,11 @@ class KakaoProfile: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_kakaoprofile)
 
-        ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS)
-        //tts 초기화 설정
-        tts = TextToSpeech(applicationContext) { status ->
-            if (status == TextToSpeech.SUCCESS) {
-                val result = tts?.setLanguage(Locale.KOREAN)
-                if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
-                    Log.e("TTS", "Korean language is not supported.")
-                }
-            } else {
-                Log.e("TTS", "Initialization failed.")
-            }
-            //tts 말하기
-            tts?.speak("안녕하세요.", TextToSpeech.QUEUE_FLUSH, null, null)
+        //프로필을 터치하면 프로필화면으로 화면전환
+        chat = findViewById<Button>(R.id.btn_chat)
+        chat.setOnClickListener {
+            val intent = Intent(this, KakaoMessage1::class.java)
+            startActivity(intent)
         }
     }
 }
