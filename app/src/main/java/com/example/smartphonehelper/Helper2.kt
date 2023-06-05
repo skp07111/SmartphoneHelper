@@ -20,7 +20,7 @@ class Helper2 : AppCompatActivity() {
         Manifest.permission.RECORD_AUDIO,
         Manifest.permission.MODIFY_AUDIO_SETTINGS
     )
-    lateinit var b_helper: Button
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_helper2)
@@ -36,11 +36,10 @@ class Helper2 : AppCompatActivity() {
                 Log.e("TTS", "Initialization failed.")
             }
 
-            tts?.speak(
-                "도우미가 켜졌습니다. 메세지를 보내고 싶으시면 메세지를 보내줘라고 말씀하세요. 유튜브를 열고싶으면 유튜브를 열여줘라고 말씀해보세요 ", TextToSpeech.QUEUE_FLUSH, null, null
-            )
+        } //끝
 
-
-        }
+        tts?.speak(
+            "도우미가 켜졌습니다. 메세지를 보내고 싶으시면 메세지를 보내줘라고 말씀하세요. 유튜브를 열고싶으면 유튜브를 열여줘라고 말씀해보세요 ", TextToSpeech.QUEUE_FLUSH, null, null
+        )
     }
 }

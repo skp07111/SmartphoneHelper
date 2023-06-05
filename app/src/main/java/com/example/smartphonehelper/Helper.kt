@@ -43,46 +43,48 @@ class Helper : AppCompatActivity() {
             } else {
                 Log.e("TTS", "Initialization failed.")
             }
-            b_helper = findViewById<Button>(R.id.btn_helper)
-            b_back = findViewById<Button>(R.id.btn_pre_back)
-            b_list = findViewById<Button>(R.id.btn_list)
+
+
+        }// tts 초기화 끝
+
+        b_helper = findViewById<Button>(R.id.btn_helper)
+        b_back = findViewById<Button>(R.id.btn_pre_back)
+        b_list = findViewById<Button>(R.id.btn_list)
+        tts?.speak(
+            "네모 테두리의 버튼들을 눌러주시면 기능을 설명해 드립니다 ", TextToSpeech.QUEUE_FLUSH, null, null
+        )
+        showPopupMessage("네모 테두리 버튼을 눌러주시면, 기능에 대해 설명해드립니다")
+        //
+        b_helper.setOnClickListener {
             tts?.speak(
-                "네모 테두리의 버튼들을 눌러주시면 기능을 설명해 드립니다 ", TextToSpeech.QUEUE_FLUSH, null, null
+                "이 버튼은 홈 버튼입니다. 이 버튼을 가볍게 누르면 맨처음 화면으로 돌아갑니다. 만약 이 버튼을 꾹 누르면 보시는 것 같이 도우미 화면이 뜹니다. 도우미에게 지도 앱을 켜달라고 할 수도있고, 오늘 날씨를 물어볼 수 있습니다. 만약 찾으려는 앱이 어디있는지 잘 모르시다면 이 버튼을 꾹 누르시고 그 후에 모르는 걸 물어보세요",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
             )
-            showPopupMessage("네모 테두리 버튼을 눌러주시면, 기능에 대해 설명해드립니다")
-            //
-            b_helper.setOnClickListener {
-                tts?.speak(
-                    "이 버튼은 홈 버튼입니다. 이 버튼을 가볍게 누르면 맨처음 화면으로 돌아갑니다. 만약 이 버튼을 꾹 누르면 보시는 것 같이 도우미 화면이 뜹니다. 도우미에게 지도 앱을 켜달라고 할 수도있고, 오늘 날씨를 물어볼 수 있습니다. 만약 찾으려는 앱이 어디있는지 잘 모르시다면 이 버튼을 꾹 누르시고 그 후에 모르는 걸 물어보세요",
-                    TextToSpeech.QUEUE_FLUSH,
-                    null,
-                    null
-                )
-                showPopupMessage("이 버튼은 홈 버튼입니다. 이 버튼을 가볍게 누르면 맨처음 화면으로 돌아갑니다. 만약 이 버튼을 꾹 누르면 보시는 것 같이 도우미 화면이 뜹니다.")
-                Handler(Looper.getMainLooper()).postDelayed({
-                    startActivity(Intent(this, Helper2::class.java))
-                }, 6000)
-            }
-            b_back.setOnClickListener {
-                tts?.speak(
-                    "이 버튼을 누르면 바로 이전 화면으로 되돌아갑니다.",
-                    TextToSpeech.QUEUE_FLUSH,
-                    null,
-                    null
-                )
-                showPopupMessage("이 버튼을 누르면 바로 이전 화면으로 되돌아갑니다.")
+            showPopupMessage("이 버튼은 홈 버튼입니다. 이 버튼을 가볍게 누르면 맨처음 화면으로 돌아갑니다. 만약 이 버튼을 꾹 누르면 보시는 것 같이 도우미 화면이 뜹니다.")
+            Handler(Looper.getMainLooper()).postDelayed({
+                startActivity(Intent(this, Helper2::class.java))
+            }, 6000)
+        }
+        b_back.setOnClickListener {
+            tts?.speak(
+                "이 버튼을 누르면 바로 이전 화면으로 되돌아갑니다.",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
+            showPopupMessage("이 버튼을 누르면 바로 이전 화면으로 되돌아갑니다.")
 
-            }
-            b_list.setOnClickListener {
-                tts?.speak(
-                    "이 버튼을 누르면 이전에 봤던 화면들의 목록을 볼 수 있습니다.",
-                    TextToSpeech.QUEUE_FLUSH,
-                    null,
-                    null
-                )
-                showPopupMessage("이 버튼을 누르면 이전에 봤던 화면들의 목록을 볼 수 있습니다.")
-            }
-
+        }
+        b_list.setOnClickListener {
+            tts?.speak(
+                "이 버튼을 누르면 이전에 봤던 화면들의 목록을 볼 수 있습니다.",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
+            showPopupMessage("이 버튼을 누르면 이전에 봤던 화면들의 목록을 볼 수 있습니다.")
         }
     }
     private fun showPopupMessage(message: String) {
