@@ -76,9 +76,27 @@ class VC_MakingCallActivity  : AppCompatActivity() {
         // vc_block = findViewById<ImageButton>(R.id.icon_vc_block1)
         // vc_speaker = findViewById<ImageButton>(R.id.icon_vc_speaker1)
 
+        tts = TextToSpeech(applicationContext) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                val result = tts?.setLanguage(Locale.KOREAN)
+                if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                    Log.e("TTS", "Korean language is not supported.")
+                }
+            } else {
+                Log.e("TTS", "Initialization failed.")
+            }
+        }
+
         vc_off.setOnClickListener() {
             var intent = Intent(this, CallActivity::class.java)
             startActivity(intent)
+            // 영상통화 종료 tts 말하기
+            tts?.speak(
+                "영상통화가 종료되었습니다. 전화를 끊고 싶을 때 이 빨간색 전화기 모양을 누르시면 됩니다.",
+                TextToSpeech.QUEUE_FLUSH,
+                null,
+                null
+            )
         }
 
         val surfaceView: SurfaceView = findViewById(R.id.surfaceView1)
@@ -98,28 +116,6 @@ class VC_MakingCallActivity  : AppCompatActivity() {
         Handler(Looper.getMainLooper()).postDelayed({
             startActivity(Intent(this, VC_OnThePhoneCallActivity::class.java))
         }, 3000) */
-
-        openTTS()
-    }
-
-    private fun openTTS() {
-        tts = TextToSpeech(applicationContext) { status ->
-            if (status == TextToSpeech.SUCCESS) {
-                val result = tts?.setLanguage(Locale.KOREAN)
-                if (result == TextToSpeech.LANG_MISSING_DATA || result == TextToSpeech.LANG_NOT_SUPPORTED) {
-                    Log.e("TTS", "Korean language is not supported.")
-                }
-            } else {
-                Log.e("TTS", "Initialization failed.")
-            }
-            //tts 말하기
-            tts?.speak(
-                "이 기능은 영상통화 기능입니다.",
-                TextToSpeech.QUEUE_FLUSH,
-                null,
-                null
-            )
-        }
     }
 
     private fun openCamera() {
