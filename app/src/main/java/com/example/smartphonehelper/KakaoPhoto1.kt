@@ -25,7 +25,7 @@ class KakaoPhoto1: AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_kakao_send_photo)
+        setContentView(R.layout.activity_kakao_sendphoto)
 
         actbutton3 = findViewById<Button>(R.id.act_btn3)
         actbutton3.setOnClickListener {

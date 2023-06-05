@@ -7,29 +7,28 @@
     android:background="#9ABAD1">
 
     <TextView
-        android:id="@+id/name10"
+        android:id="@+id/name8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="37dp"
         android:layout_marginBottom="14dp"
         android:text="김연정"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView43"
-        app:layout_constraintStart_toStartOf="@+id/imageView41" />
+        app:layout_constraintBottom_toBottomOf="@+id/imageView40"
+        app:layout_constraintStart_toStartOf="@+id/imageView29" />
 
     <ImageView
-        android:id="@+id/imageView41"
+        android:id="@+id/imageView29"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="21dp"
-        android:layout_marginBottom="472dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageView43"
-        app:layout_constraintTop_toBottomOf="@+id/imageView43"
+        android:layout_marginTop="210dp"
+        app:layout_constraintStart_toStartOf="@+id/imageView40"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/rectangle_54" />
 
     <ImageView
-        android:id="@+id/imageView42"
+        android:id="@+id/imageView39"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="73dp"
@@ -39,50 +38,41 @@
         app:srcCompat="@drawable/rectangle_54" />
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/textView18"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="13dp"
         android:layout_marginTop="9dp"
         android:text="안녕하세요"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toStartOf="@+id/imageView42"
-        app:layout_constraintTop_toTopOf="@+id/imageView42" />
+        app:layout_constraintStart_toStartOf="@+id/imageView39"
+        app:layout_constraintTop_toTopOf="@+id/imageView39" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/textView19"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="17dp"
         android:layout_marginTop="7dp"
         android:text="반갑습니다"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toStartOf="@+id/imageView41"
-        app:layout_constraintTop_toBottomOf="@+id/imageView43" />
+        app:layout_constraintStart_toStartOf="@+id/imageView29"
+        app:layout_constraintTop_toTopOf="@+id/imageView29" />
 
     <ImageView
-        android:id="@+id/imageView43"
-        android:layout_width="61dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="152dp"
-        app:layout_constraintBottom_toTopOf="@+id/imageView41"
+        android:id="@+id/imageView40"
+        android:layout_width="0dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="39dp"
+        app:layout_constraintBottom_toBottomOf="@+id/textView19"
+        app:layout_constraintEnd_toEndOf="@+id/imageView31"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView18"
         app:srcCompat="@drawable/baseline_account_circle_24" />
 
-    <TextView
-        android:id="@+id/name9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="12dp"
-        android:layout_marginTop="14dp"
-        android:text="김연정"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:layout_constraintStart_toEndOf="@+id/imageView48"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ImageView
-        android:id="@+id/imageView48"
+        android:id="@+id/imageView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
@@ -91,8 +81,29 @@
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/baseline_arrow_back_24" />
 
+    <TextView
+        android:id="@+id/name3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="14dp"
+        android:text="김연정"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toEndOf="@+id/imageView6"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
-        android:id="@+id/imageView50"
+        android:id="@+id/imageView22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="12dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView27"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/baseline_search_24" />
+
+    <ImageView
+        android:id="@+id/imageView27"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
@@ -102,13 +113,30 @@
         app:srcCompat="@drawable/baseline_menu_24" />
 
     <ImageView
-        android:id="@+id/imageView49"
+        android:id="@+id/imageView30"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="12dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView50"
+        android:layout_marginTop="660dp"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/baseline_search_24" />
+        app:srcCompat="@drawable/component_51" />
 
+    <Button
+        android:id="@+id/act_btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
+        android:background="@android:color/transparent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView30"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageView
+        android:id="@+id/imageView31"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        app:layout_constraintStart_toStartOf="@+id/act_btn3"
+        app:layout_constraintTop_toTopOf="@+id/act_btn3"
+        app:srcCompat="@drawable/baseline_touch_app_24" />
 </androidx.constraintlayout.widget.ConstraintLayout>
