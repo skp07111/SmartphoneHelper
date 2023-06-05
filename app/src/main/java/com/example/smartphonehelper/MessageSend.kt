@@ -36,7 +36,7 @@ class MessageSend : AppCompatActivity() {
                 Log.e("TTS", "Initialization failed.")
             }
             tts?.speak(
-                "하단의 말풍선 그림을 눌러보세요.", TextToSpeech.QUEUE_FLUSH, null, null
+                "메세지를 성공적으로 전송했습니다.", TextToSpeech.QUEUE_FLUSH, null, null
             )
         }
 
