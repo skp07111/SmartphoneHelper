@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.smartphonehelper">
+    package="com.npnc.smartphonehelper">
 
     <uses-feature
         android:name="android.hardware.camera"
@@ -29,172 +29,172 @@
         android:theme="@style/Theme.SmartphoneHelper"
         tools:targetApi="31">
         <activity
-            android:name=".PlayStore4Activity"
+            android:name="com.npnc.smartphonehelper.PlayStore4Activity"
             android:exported="false"
-            android:parentActivityName=".PlayStore3Activity"/>
+            android:parentActivityName="com.npnc.smartphonehelper.PlayStore3Activity"/>
         <activity
-            android:name=".PlayStore3Activity"
+            android:name="com.npnc.smartphonehelper.PlayStore3Activity"
             android:exported="false"
-            android:parentActivityName=".PlayStore2Activity"/>
+            android:parentActivityName="com.npnc.smartphonehelper.PlayStore2Activity"/>
         <activity
-            android:name=".PlayStore2Activity"
+            android:name="com.npnc.smartphonehelper.PlayStore2Activity"
             android:exported="false"
-            android:parentActivityName=".PlayStoreActivity"/>
+            android:parentActivityName="com.npnc.smartphonehelper.PlayStoreActivity"/>
         <activity
-            android:name=".PlayStoreActivity"
+            android:name="com.npnc.smartphonehelper.PlayStoreActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.MainActivity" />
         <activity
-            android:name=".YoutubeVideoActivity"
+            android:name="com.npnc.smartphonehelper.YoutubeVideoActivity"
             android:exported="false"
-            android:parentActivityName=".YoutubeMainActivity"/>
+            android:parentActivityName="com.npnc.smartphonehelper.YoutubeMainActivity"/>
         <activity
-            android:name=".YoutubeSearchActivity"
+            android:name="com.npnc.smartphonehelper.YoutubeSearchActivity"
             android:exported="false"
-            android:parentActivityName=".YoutubeMainActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.YoutubeMainActivity" />
         <activity
-            android:name=".YoutubeShareActivity"
+            android:name="com.npnc.smartphonehelper.YoutubeShareActivity"
             android:exported="false"
-            android:parentActivityName=".YoutubeMenuActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.YoutubeMenuActivity" />
         <activity
-            android:name=".GalleryShareActivity"
+            android:name="com.npnc.smartphonehelper.GalleryShareActivity"
             android:exported="false"
-            android:parentActivityName=".Gallery3Activity" />
+            android:parentActivityName="com.npnc.smartphonehelper.Gallery3Activity" />
         <activity
-            android:name=".YoutubeKakao1Activity"
+            android:name="com.npnc.smartphonehelper.YoutubeKakao1Activity"
             android:exported="false"
-            android:parentActivityName=".YoutubeShareActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.YoutubeShareActivity" />
         <activity
-            android:name=".YoutubeKakao2Activity"
+            android:name="com.npnc.smartphonehelper.YoutubeKakao2Activity"
             android:exported="false"
-            android:parentActivityName=".YoutubeKakao1Activity" />
+            android:parentActivityName="com.npnc.smartphonehelper.YoutubeKakao1Activity" />
         <activity
-            android:name=".YoutubeKakao3Activity"
+            android:name="com.npnc.smartphonehelper.YoutubeKakao3Activity"
             android:exported="false"
-            android:parentActivityName=".YoutubeKakao2Activity" />
+            android:parentActivityName="com.npnc.smartphonehelper.YoutubeKakao2Activity" />
         <activity
-            android:name=".YoutubeMenuActivity"
+            android:name="com.npnc.smartphonehelper.YoutubeMenuActivity"
             android:exported="false"
-            android:parentActivityName=".YoutubeMainActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.YoutubeMainActivity" />
         <activity
-            android:name=".YoutubeMainActivity"
+            android:name="com.npnc.smartphonehelper.YoutubeMainActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.MainActivity" />
         <activity
-            android:name=".Gallery3Activity"
+            android:name="com.npnc.smartphonehelper.Gallery3Activity"
             android:exported="false"
-            android:parentActivityName=".Gallery2Activity" />
+            android:parentActivityName="com.npnc.smartphonehelper.Gallery2Activity" />
         <activity
-            android:name=".Gallery2Activity"
+            android:name="com.npnc.smartphonehelper.Gallery2Activity"
             android:exported="false"
-            android:parentActivityName=".GalleryActivity"/>
+            android:parentActivityName="com.npnc.smartphonehelper.GalleryActivity"/>
         <activity
-            android:name=".GalleryActivity"
+            android:name="com.npnc.smartphonehelper.GalleryActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.MainActivity" />
         <activity
-            android:name=".VC_OnThePhoneCallActivity"
+            android:name="com.npnc.smartphonehelper.VC_OnThePhoneCallActivity"
             android:exported="false"
-            android:parentActivityName=".CallActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.CallActivity" />
         <activity
-            android:name=".VC_MakingCallActivity"
+            android:name="com.npnc.smartphonehelper.VC_MakingCallActivity"
             android:exported="false"
-            android:parentActivityName=".CallActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.CallActivity" />
         <activity
-            android:name=".C_OnThePhoneCallActivity"
+            android:name="com.npnc.smartphonehelper.C_OnThePhoneCallActivity"
             android:exported="false"
-            android:parentActivityName=".CallActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.CallActivity" />
         <activity
-            android:name=".C_MakingCallActivity"
+            android:name="com.npnc.smartphonehelper.C_MakingCallActivity"
             android:exported="false"
-            android:parentActivityName=".CallActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.CallActivity" />
         <activity
-            android:name=".C_RecentCallActivity"
+            android:name="com.npnc.smartphonehelper.C_RecentCallActivity"
             android:exported="false"
-            android:parentActivityName=".CallActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.CallActivity" />
         <activity
-            android:name=".C_PhoneBookActivity"
+            android:name="com.npnc.smartphonehelper.C_PhoneBookActivity"
             android:exported="false"
-            android:parentActivityName=".CallActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.CallActivity" />
         <activity
-            android:name=".C_PhoneBook_SearchActivity"
+            android:name="com.npnc.smartphonehelper.C_PhoneBook_SearchActivity"
             android:exported="false"
-            android:parentActivityName=".CallActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.CallActivity" />
         <activity
-            android:name=".C_PhoneBook_Search2Activity"
+            android:name="com.npnc.smartphonehelper.C_PhoneBook_Search2Activity"
             android:exported="false"
-            android:parentActivityName=".CallActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.CallActivity" />
         <activity
-            android:name=".C_PhoneBookAddActivity"
+            android:name="com.npnc.smartphonehelper.C_PhoneBookAddActivity"
             android:exported="false"
-            android:parentActivityName=".CallActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.CallActivity" />
         <activity
-            android:name=".CallActivity"
+            android:name="com.npnc.smartphonehelper.CallActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName="com.npnc.smartphonehelper.MainActivity"/>
         <activity
-            android:name=".MessageActivity"
+            android:name="com.npnc.smartphonehelper.MessageActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.MainActivity" />
         <activity
-            android:name=".CameraActivity"
+            android:name="com.npnc.smartphonehelper.CameraActivity"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.MainActivity" />
         <activity
-            android:name=".Helper"
+            android:name="com.npnc.smartphonehelper.Helper"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.MainActivity" />
         <activity
-            android:name=".Helper2"
+            android:name="com.npnc.smartphonehelper.Helper2"
             android:exported="false"
-            android:parentActivityName=".Helper" />
+            android:parentActivityName="com.npnc.smartphonehelper.Helper" />
         <activity
-            android:name=".KakaoMain"
+            android:name="com.npnc.smartphonehelper.KakaoMain"
             android:exported="false"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName="com.npnc.smartphonehelper.MainActivity" />
         <activity
-            android:name=".KakaoProfile"
+            android:name="com.npnc.smartphonehelper.KakaoProfile"
             android:exported="false"
-            android:parentActivityName=".KakaoMain"/>
+            android:parentActivityName="com.npnc.smartphonehelper.KakaoMain"/>
         <activity
-            android:name=".KakaoMessage1"
+            android:name="com.npnc.smartphonehelper.KakaoMessage1"
             android:exported="false"
-            android:parentActivityName=".KakaoMain"/>
+            android:parentActivityName="com.npnc.smartphonehelper.KakaoMain"/>
         <activity
-            android:name=".KakaoMessage2"
+            android:name="com.npnc.smartphonehelper.KakaoMessage2"
             android:exported="false"
-            android:parentActivityName=".KakaoMain"/>
+            android:parentActivityName="com.npnc.smartphonehelper.KakaoMain"/>
         <activity
-            android:name=".KakaoMessage3"
+            android:name="com.npnc.smartphonehelper.KakaoMessage3"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName="com.npnc.smartphonehelper.MainActivity"/>
         <activity
-            android:name=".KakaoPhoto1"
+            android:name="com.npnc.smartphonehelper.KakaoPhoto1"
             android:exported="false"
-            android:parentActivityName=".KakaoMain"/>
+            android:parentActivityName="com.npnc.smartphonehelper.KakaoMain"/>
         <activity
-            android:name=".KakaoPhoto2"
+            android:name="com.npnc.smartphonehelper.KakaoPhoto2"
             android:exported="false"
-            android:parentActivityName=".KakaoPhoto1"/>
+            android:parentActivityName="com.npnc.smartphonehelper.KakaoPhoto1"/>
         <activity
-            android:name=".KakaoPhoto3"
+            android:name="com.npnc.smartphonehelper.KakaoPhoto3"
             android:exported="false"
-            android:parentActivityName=".KakaoPhoto2"/>
+            android:parentActivityName="com.npnc.smartphonehelper.KakaoPhoto2"/>
         <activity
-            android:name=".KakaoPhoto4"
+            android:name="com.npnc.smartphonehelper.KakaoPhoto4"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName="com.npnc.smartphonehelper.MainActivity"/>
         <activity
-            android:name=".MessageWrite"
+            android:name="com.npnc.smartphonehelper.MessageWrite"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName="com.npnc.smartphonehelper.MainActivity"/>
         <activity
-            android:name=".MessageSend"
+            android:name="com.npnc.smartphonehelper.MessageSend"
             android:exported="false"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName="com.npnc.smartphonehelper.MainActivity"/>
 
         <activity
-            android:name=".MainActivity"
+            android:name="com.npnc.smartphonehelper.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
