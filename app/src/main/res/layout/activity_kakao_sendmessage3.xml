@@ -40,44 +40,47 @@
         <ImageView
             android:id="@+id/imageView94"
             android:layout_width="61dp"
-            android:layout_height="58dp"
-            android:layout_marginTop="38dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="153dp"
+            android:layout_marginBottom="188dp"
+            app:layout_constraintBottom_toTopOf="@+id/textView49"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView47"
+            app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/baseline_account_circle_24" />
 
         <TextView
             android:id="@+id/textView49"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="236dp"
+            android:layout_marginBottom="174dp"
             android:background="#804A4A4A"
             android:gravity="center"
             android:text="메세지 보내기에                성공했습니다!"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Display2"
             android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/imageView28"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView94" />
+
+        <ImageView
+            android:id="@+id/imageView28"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView49"
+            app:srcCompat="@drawable/component_51" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-    <ImageView
-        android:id="@+id/imageView28"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="661dp"
-        app:layout_constraintStart_toStartOf="@+id/constraintLayout2"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/component_51" />
 
     <Button
         android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="77dp"
+        android:layout_marginBottom="147dp"
         android:text="다음"
-        app:layout_constraintBottom_toTopOf="@+id/imageView28"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
